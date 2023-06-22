@@ -98,6 +98,7 @@
 
 // let count = 0;
 
+// this will go pass case 2 3 4 5 then stop at 6 if the value is less than or equal to 6
 // function cc(card){
 //     switch(card){
 //         case 2:
@@ -490,3 +491,44 @@
 // console.log('recursive inclusive array solution: ', inclusiveArrayParamRecursive(2, 6))
 // Base Case sets the loop paramenters to return the startVal.
 // Once the start value equals end value we return the call stack to unwind.
+
+
+// When the property you want inside an object already exists outside and you want to use it,
+// if they have the same naming, ei. name: name... then you can ommit the :name
+// const name = 'Pedro';
+// const age = 20;
+
+// const person = {
+//     name,
+//     age,
+//     isMarried: false
+// };
+
+// person 2 will be the same as person but the name will be jack
+//const person2 = {...person,name: 'jack'};
+
+// copy all index of names into names2 then push/add joel
+// const names = ['jack','pedro','jessica','pedro','pedro'];
+// const names2 = [...names, 'joel'];
+
+// basically for each item (name) in names, item + '1
+// you replace the index with what you return. in this case, we use the index + '1'
+// names.map((name) => {
+//     return name += '1';
+// });
+
+// names.map(x => console.log(x));
+
+// filter must use condition when returning?
+// in this case the name pedro will be ommitted
+//console.log(names.filter(x => {return x !== 'pedro'}));
+
+// .map()
+// .filter()
+// .reduce()
+
+//const {name,age,isMarried} = person;
+//console.log(person);
+//console.log(person2);
+//console.log(names);
+//console.log(names2);
