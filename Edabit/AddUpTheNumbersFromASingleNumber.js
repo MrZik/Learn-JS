@@ -5,3 +5,7 @@ function addUp(num) {
 	}
 	return total;
 }
+
+function addUp(num){
+    return (num * (num + 1)) / 2;
+}
