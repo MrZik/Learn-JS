@@ -460,3 +460,9 @@
 // })();
 // console.log(arr2);
 
+// function and(a,b){
+//     return a && b;
+//     //return a ? b ? true : false : !b ? false : true;
+// }
+
+// console.log(and(false,true));
