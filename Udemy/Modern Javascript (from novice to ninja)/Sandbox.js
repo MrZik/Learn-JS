@@ -466,3 +466,27 @@
 // }
 
 // console.log(and(false,true));
+
+function inclusiveArrayParam(startVal, endVal) {
+    const arr = []
+    for(let i = startVal; i <= endVal; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+
+console.log('iterative inclusive array solution: ', inclusiveArrayParam(2, 6));
+
+function inclusiveArrayParamRecursive(startVal, endVal) {
+    if(startVal >= endVal){
+        return [startVal];
+    } else{
+        const arr = inclusiveArrayParam(startVal,endVal - 1);
+        arr.push(endVal);
+        return arr;
+    }
+}
+
+console.log('recursive inclusive array solution: ', inclusiveArrayParamRecursive(2, 6))
+// Base Case sets the loop paramenters to return the startVal.
+// Once the start value equals end value we return the call stack to unwind.
