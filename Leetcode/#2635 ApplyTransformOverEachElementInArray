@@ -1,0 +1,50 @@
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+
+// Inmemory transformations
+// 85 ms
+// more efficient to memory ?
+// const map = function(arr, fn) {
+//     for(let i = 0; i < arr.length; ++i){
+//         arr[i] = fn(arr[i],i);
+//     }
+//     return arr;
+// };
+
+// doesn't modify the input array
+// 72 ms
+// const map = function(arr, fn) {
+//     let toReturnArr = new Array(arr.length);
+
+//     for(let i = 0; i < toReturnArr.length; ++i){
+//         toReturnArr[i] = fn(arr[i],i);
+//     }
+//     return toReturnArr;
+// };
+
+// arr.forEach()
+// 86 ms
+// const map = function(arr,fn){
+//     const toReturnArr = [];
+//     arr.forEach( (element,index) => {
+//         toReturnArr[index] = fn(element,index)
+//     } );
+//     return toReturnArr;
+// }
+
+// reduce method
+// 80 ms
+const map = function(arr,fn){
+    return arr.reduce( (toReturnArr, element, index) => {
+        toReturnArr[index] = fn(element, index);
+        return toReturnArr;
+    }, []);
+};
+
+// array.map
+// const map = function(arr,fn){
+//     return arr.map((element, index) => fn(element, index));
+// };
