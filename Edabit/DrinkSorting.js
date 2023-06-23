@@ -1,3 +1,3 @@
 function sortDrinkByPrice(drinks) {
-	return drinks.sort((a,b) => {return a.price - b.price});
+	return drinks.sort((a,b) => a.price - b.price);
 }
