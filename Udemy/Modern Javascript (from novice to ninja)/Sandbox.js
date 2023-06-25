@@ -532,3 +532,14 @@
 //console.log(person2);
 //console.log(names);
 //console.log(names2);
+
+// function expression
+// when a variable is set to function
+// const speak = function(){
+// console.lost('Good day!');
+// };
+
+// this is not a function expression, only a function declaration
+// function greet(){
+// console.log('hello there');
+// }
