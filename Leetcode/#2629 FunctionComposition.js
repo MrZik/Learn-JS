@@ -24,6 +24,16 @@ var compose = function(functions) {
 
 var compose = (functions) => functions.reduceRight((a, b) => (c) => b(a(c)), c => c)
 
+// function (a,b) {
+//     function (c){
+//         return function (b){
+//             return function (a){
+                
+//             }
+//         }
+//     }
+// }
+
 /**
  * const fn = compose([x => x + 1, x => 2 * x])
  * fn(4) // 9
