@@ -546,18 +546,27 @@
 // speak();
 // speak('Momo','night');
 
-// this is not a function expression, only a function declaration
-// function greet(){
-// console.log('hello there');
-// }
+// this is not a function expression, only a arrow function declaration
+// () => console.log('hello there');
 
 // this is how you call a function
 // greet();
 
-// const calcArea = function(radius) {
-//     return 3.14 * radius**2; 
-// };
-
+// const calcArea = radius => 3.14 * radius**2;
+// const greet = () => console.log('hello there');
+// greet();
 // console.log(calcArea(5));
 
+const bill = (products, tax) => {
+    return products.reduce((accumulator,current) => accumulator + current + current * tax,0);
+};
 
+// const bill = (products,tax) => {
+//     let total = 0;
+//     for(let i = 0; i < products.length; ++i){
+//         total += products[i] + products[i] * tax;
+//     };
+//     return total;
+//   };
+
+console.log((bill([10,15,30],0.2)));
