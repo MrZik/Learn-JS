@@ -535,11 +535,24 @@
 
 // function expression
 // when a variable is set to function
-// const speak = function(){
-// console.lost('Good day!');
+// JS DOES NOT HOIST FUNCTION EXPRESSION!!!
+// const speak = function(name = 'luigi', time = 'night'){
+    // use string template
+// console.lost(`Good ${time} ${name}!`);
 // };
+
+// This is how you use or call a function expression
+// speak('Mario');
+// speak();
+// speak('Momo','night');
 
 // this is not a function expression, only a function declaration
 // function greet(){
 // console.log('hello there');
 // }
+
+// this is how you call a function
+// greet();
+
+
+
