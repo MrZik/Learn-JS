@@ -591,23 +591,38 @@
 // ************************************************************
 
 // Objects uses key: 'value' pair
-
+// you must use the regular function() {} when you want to use the this keyword
+// or you can use the function name then () ex login() {}
 let user = {
     name: 'crystal',
     age: 30,
     email: 'crystal@gmail.com',
     location: 'Berlin',
-    blogs: ['Why mac & cheese rules', '10 things to make with marmitte']
+    blogs: ['Why mac & cheese rules', '10 things to make with marmitte'],
+    login: function(){
+        console.log('The user logged in.');
+    },
+    logout(){
+        console.log('The user logged out.');
+    },
+    logBlogs() {
+        console.log('This user has written the following blogs:');
+        this.blogs.forEach(blog => {console.log(blog)});
+    }
 };
 
-console.log(user);
-console.log(user.name);
+// console.log(user);
+// console.log(user.name);
 
-user.age = 35;
+// user.age = 35;
 
-console.log(user.age);
+// console.log(user.age);
 
-console.log(user['email']);
+// console.log(user['email']);
 
-user['name'] = 'chun-li';
-console.log(user['name']);
+// user['name'] = 'chun-li';
+// console.log(user['name']);
+
+// user.login();
+// user.logout();
+user.logBlogs();
