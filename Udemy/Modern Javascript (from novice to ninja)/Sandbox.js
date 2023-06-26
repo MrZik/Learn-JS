@@ -557,9 +557,9 @@
 // greet();
 // console.log(calcArea(5));
 
-const bill = (products, tax) => {
-    return products.reduce((accumulator,current) => accumulator + current + current * tax,0);
-};
+// const bill = (products, tax) => {
+//     return products.reduce((accumulator,current) => accumulator + current + current * tax,0);
+// };
 
 // const bill = (products,tax) => {
 //     let total = 0;
@@ -569,4 +569,23 @@ const bill = (products, tax) => {
 //     return total;
 //   };
 
-console.log((bill([10,15,30],0.2)));
+//console.log((bill([10,15,30],0.2)));
+
+// ************************************************************
+// ************************************************************
+
+const ul = document.querySelector('.people');
+
+const people = ['mario','luigi','ryu','shaun','chun-li'];
+
+let html = ``;
+
+people.forEach((person) => {
+    html += `<li style="color: purple"> ${person}</li>`
+});
+
+console.log(html);
+ul.innerHTML = html;
+
+// ************************************************************
+// ************************************************************
