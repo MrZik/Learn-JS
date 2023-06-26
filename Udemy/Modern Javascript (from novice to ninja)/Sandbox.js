@@ -574,18 +574,40 @@
 // ************************************************************
 // ************************************************************
 
-const ul = document.querySelector('.people');
+// const ul = document.querySelector('.people');
 
-const people = ['mario','luigi','ryu','shaun','chun-li'];
+// const people = ['mario','luigi','ryu','shaun','chun-li'];
 
-let html = ``;
+// let html = ``;
 
-people.forEach((person) => {
-    html += `<li style="color: purple"> ${person}</li>`
-});
+// people.forEach((person) => {
+//     html += `<li style="color: purple"> ${person}</li>`
+// });
 
-console.log(html);
-ul.innerHTML = html;
+// console.log(html);
+// ul.innerHTML = html;
 
 // ************************************************************
 // ************************************************************
+
+// Objects uses key: 'value' pair
+
+let user = {
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@gmail.com',
+    location: 'Berlin',
+    blogs: ['Why mac & cheese rules', '10 things to make with marmitte']
+};
+
+console.log(user);
+console.log(user.name);
+
+user.age = 35;
+
+console.log(user.age);
+
+console.log(user['email']);
+
+user['name'] = 'chun-li';
+console.log(user['name']);
