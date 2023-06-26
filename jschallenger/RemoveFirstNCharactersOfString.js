@@ -1,5 +1,5 @@
 function MyFunction(a){
-    return a.slice(3);
+    return a.substring(0,3);
 }
 
 console.log(MyFunction('abcdefg'));
