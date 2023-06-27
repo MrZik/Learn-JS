@@ -714,6 +714,21 @@
 
 // console.log(userOne,userTwo);
 
+// let user = {
+//     name: "John",
+//     hi() { alert(this.name); },
+//     bye() { alert("Bye"); }
+// };
+
+// object dot method;
+// user.hi();
+
+// evaluated method;
+// notice that the conditional statement is inside the () 
+// then another () is added after the check 
+// (user.name == "John" ? user.hi : user.bye)();
+  
+
 // ************************************************************
 // ************************************************************
 
