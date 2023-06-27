@@ -658,3 +658,38 @@
 
 // ************************************************************
 // ************************************************************
+
+// Primitive types and reference tpes
+// primitive type => stack = limited, faster
+// reference type => heap = more space, slower
+
+// primitive
+// numbers
+// strings
+// booleans
+// null
+// undefined
+// symbols
+
+// reference type
+// all types of objects
+// object literal
+// array
+// functions
+// dates
+// all other objects like math objects
+
+// if we create the initial variable userOne with an object (reference type)
+// the const userOne will be added to the stack with a pointer to the object
+// because the object will be placed in the heap
+// const userOne = {name: 'shaun',score: 100};
+
+// Now when we create a new variable that takes in the userOne as it value
+// const userTwo will still be added to the stack but will have the same pointer
+// as userOne, meaning the object {name:...} will not be created in the heap a second time
+// there will be only ONE object {name...} with two pointers to it, ei userOne and userTwo pointers
+// const userTwo = userOne;
+
+// When you updated userOne, it will then update userTwo because they point to the same object in the heap
+// const userOne = {name: 'shaun', score: 50}
+
