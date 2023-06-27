@@ -693,3 +693,26 @@
 // When you updated userOne, it will then update userTwo because they point to the same object in the heap
 // const userOne = {name: 'shaun', score: 50}
 
+// primitive types
+
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
+
+// console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+
+// scoreOne = 100;
+// console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+
+// reference types
+
+// const userOne = {name: 'ryu',age: 30};
+// const userTwo = userOne;
+
+// console.log(userOne,userTwo);
+
+// userTwo.age = 50;
+
+// console.log(userOne,userTwo);
+
+// ************************************************************
+// ************************************************************
