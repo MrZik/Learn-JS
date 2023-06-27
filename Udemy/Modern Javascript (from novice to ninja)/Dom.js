@@ -89,3 +89,12 @@
 
 // Getting and setting attributes
 
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+// this changes the string inside the href = ''
+link.setAttribute('href','https://www.thenetninja.co.uk');
+// this changes the display text inside the tag. <a> .... </a>
+link.innerText = 'The net ninja website.';
+
+const msg = document.querySelector('p');
