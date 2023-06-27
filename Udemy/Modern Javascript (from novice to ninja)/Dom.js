@@ -69,16 +69,23 @@
 // const paras = document.querySelectorAll('p');
 // paras.forEach(para => console.log(para.innerText = 'I changed all p tags!'));
 
-const content = document.querySelector('.content');
-// console.log(content.innerHTML);
+// const content = document.querySelector('.content');
+// // console.log(content.innerHTML);
 
-// adds the <h2> tag after the last tag
-content.innerHTML += '<h2>This is a new H2</h2>'
+// // adds the <h2> tag after the last tag
+// content.innerHTML += '<h2>This is a new H2</h2>'
 
-const people = ['mario','luigi','yoshi'];
+// const people = ['mario','luigi','yoshi'];
 
-// this does the same as the h2 above
-people.forEach(person => {
-    content.innerHTML += `<p>${person}</p>`;
-});
+// // this does the same as the h2 above
+// people.forEach(person => {
+//     content.innerHTML += `<p>${person}</p>`;
+// });
+
+
+// ***************************************************************************************
+// ***************************************************************************************
+
+
+// Getting and setting attributes
 
