@@ -642,6 +642,19 @@
 // MATH
 // console.log(Math); // if you check this in the browser console, it will show you the properties of Math
 
-const area = 7.2;
+// const area = 7.7;
 
-console.log(Math.round(area));
+// console.log(Math.round(area));
+// console.log(Math.floor(area));
+// console.log(Math.ceil(area));
+// console.log(Math.trunc(area)); // take away the decimal and leave with the integer
+
+// // random numbers
+
+// const random = Math.random(); // 0 - 1 exclusive 1
+// console.log(Math.round(random)); // this will include 1 because it rounds up
+// console.log(Math.round(random) * 100); // 0 or 100
+// console.log(random * 100); // 0 - 99.999999
+
+// ************************************************************
+// ************************************************************
