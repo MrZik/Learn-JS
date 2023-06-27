@@ -106,17 +106,23 @@
 // Add a new attribute after the class tag
 // msg.setAttribute('style','color: green');
 
-const title = document.querySelector('h1');
+// const title = document.querySelector('h1');
 // title.setAttribute('style','margin: 50px;');
 
 // go to the property instead and modify it as string
 // this will add a new property in the html tag, keep the previous values
-title.style.margin = '50px';
+// title.style.margin = '50px';
 
 // this will override the property of it already exist in the html
-title.style.color = 'crimson';
+// title.style.color = 'crimson';
 
-title.style.fontSize = '60px';
+// title.style.fontSize = '60px';
 
 // this removes the margin property in the html
-title.style.margin = '';
+// title.style.margin = '';
+
+
+// ***************************************************************************************
+// ***************************************************************************************
+
+
