@@ -640,3 +640,8 @@
 // ************************************************************
 
 // MATH
+// console.log(Math); // if you check this in the browser console, it will show you the properties of Math
+
+const area = 7.2;
+
+console.log(Math.round(area));
