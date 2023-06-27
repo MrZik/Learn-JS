@@ -127,6 +127,58 @@
 
 // ADDING & REMOVING CLASSES
 
-const content = document.querySelector('p');
+//const content = document.querySelector('p');
 
-console.log(content.classList);
+// This gets all the classes in the p tag
+//console.log(content.classList);
+//content.classList.add('error');
+//content.classList.remove('error');
+//content.classList.add('success');
+
+// const paras = document.querySelectorAll('p');
+
+// paras.forEach(p => {
+//     // gets all the text that is VISIBLE
+//     // p.innerText
+//     // gets all the text regardless if they are hiddne.
+//     p.textContent.includes('error') && p.classList.add('error');
+//     p.textContent.includes('success') && p.classList.add('success');
+// });
+
+//const title = document.querySelector('.title');
+// toggle adds a class if there is no class with that name
+// then removes it if it finds a similar class name
+// title.classList.toggle('test');
+// title.classList.toggle('test');
+
+
+// ***************************************************************************************
+// ***************************************************************************************
+
+// Node relations
+// parents children & siblings
+
+// const article = document.querySelector('article');
+// this is not destructive
+// this creates a new array
+// Array.from(article.children).forEach(child => child.classList.add('article-element'));
+
+//const title = document.querySelector('h2');
+
+// find the parent
+// console.log(title.parentElement);
+// console.log(title.parentElement.parentElement);
+
+// get the next element / tag sibling
+// console.log(title.nextElementSibling);
+
+// console.log(title.previousElementSibling);
+
+// console.log(title.nextElementSibling.parentElement.children);
+
+
+
+// ***************************************************************************************
+// ***************************************************************************************
+
+
