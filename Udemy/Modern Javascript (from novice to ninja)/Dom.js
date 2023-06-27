@@ -24,19 +24,50 @@
 //     console.log(para);
 // });
 
+// paras.entries()
+// paras.item()
+// paras.keys()
+// paras.values()
+
 // console.log(error);
 
 // ***************************************************************************************
 // ***************************************************************************************
 
 // get an element by ID
+// const title = document.getElementById('page-title');
+// console.log(title);
 
 
 // get elements by their class name
+// html collections
+// const error = document.getElementsByClassName('error');
+// console.log(error);
+
+// We cannot use the forEach for a html collection
+// error.array.forEach(element => {
+//     console.log(element);
+// });
+
+// two ways to access them other than the bracket notation
+// console.log(error.item(0));
+// error.namedItem();
 
 
-// get elements byy their tag name
+// get elements by their tag name
+// html collection
+// const paras = document.getElementsByTagName('p');
+// console.log(paras);
+// console.log(paras[0]);
 
 
 // ***************************************************************************************
 // ***************************************************************************************
+
+// const para = document.querySelector('p');
+// console.log(para.innerText = 'ninjas are awesome');
+// const paras = document.querySelectorAll('p');
+// paras.forEach(para => console.log(para.innerText = 'I changed all p tags!'));
+
+const content = document.querySelector('.content');
+console.log(content.innerHTML);
