@@ -97,7 +97,7 @@
 // this changes the display text inside the tag. <a> .... </a>
 //link.innerText = 'The net ninja website.';
 
-const msg = document.querySelector('p');
+// const msg = document.querySelector('p');
 
 // this will return what the attribute name is?? ex. class = "error"
 // console.log(msg.getAttribute('class'));
@@ -105,3 +105,9 @@ const msg = document.querySelector('p');
 
 // Add a new attribute after the class tag
 // msg.setAttribute('style','color: green');
+
+const title = document.querySelector('h1');
+// title.setAttribute('style','margin: 50px;');
+
+// go to the property instead and modify it as string
+title.style.margin = '50px';
