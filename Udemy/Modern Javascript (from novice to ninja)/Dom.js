@@ -181,4 +181,23 @@
 // ***************************************************************************************
 // ***************************************************************************************
 
+//const button = document.querySelector('button');
 
+// first param is what event we want to listen to
+// second param is the callback
+// button.addEventListener('click', () => { 
+//     console.log('You clicked me.');
+// });
+
+// returns a node list
+const items = document.querySelectorAll('li');
+
+// when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
+// e.target return the <li></li> tag
+items.forEach(item => {
+    item.addEventListener('click', e => {
+        // console.log(e.target);
+        // console.log(item);
+        e.target.style.textDecoration = 'line-through';
+    });
+});
