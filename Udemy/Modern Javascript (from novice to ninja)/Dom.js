@@ -89,12 +89,19 @@
 
 // Getting and setting attributes
 
-const link = document.querySelector('a');
+//const link = document.querySelector('a');
 
-console.log(link.getAttribute('href'));
+//console.log(link.getAttribute('href'));
 // this changes the string inside the href = ''
-link.setAttribute('href','https://www.thenetninja.co.uk');
+//link.setAttribute('href','https://www.thenetninja.co.uk');
 // this changes the display text inside the tag. <a> .... </a>
-link.innerText = 'The net ninja website.';
+//link.innerText = 'The net ninja website.';
 
 const msg = document.querySelector('p');
+
+// this will return what the attribute name is?? ex. class = "error"
+// console.log(msg.getAttribute('class'));
+// msg.setAttribute('class','success');
+
+// Add a new attribute after the class tag
+// msg.setAttribute('style','color: green');
