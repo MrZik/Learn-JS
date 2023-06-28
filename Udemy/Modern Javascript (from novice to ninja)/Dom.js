@@ -194,6 +194,9 @@ const items = document.querySelectorAll('li');
 //const ul = document.querySelector('ul');
 //ul.remove();
 
+const button = document.querySelector('button');
+
+
 // when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
 // e.target return the <li></li> tag
 items.forEach(item => {
@@ -203,5 +206,9 @@ items.forEach(item => {
         //e.target.style.textDecoration = 'line-through';
         e.target.remove();
     });
+});
+
+button.addEventListener('click',() => {
+    
 });
 
