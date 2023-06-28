@@ -191,7 +191,7 @@
 
 // returns a node list
 const items = document.querySelectorAll('li');
-//const ul = document.querySelector('ul');
+const ul = document.querySelector('ul');
 //ul.remove();
 
 const button = document.querySelector('button');
@@ -209,6 +209,13 @@ items.forEach(item => {
 });
 
 button.addEventListener('click',() => {
-    
+    //ul.innerHTML += `<li>something new</li>`;
+    // create a new empty <li></li>
+    const li = document.createElement('li');
+    li.textContent = `something new to do`;
+    // takes the li and put it at the end of the tag
+    //ul.append(li);
+    // this puts it on the top of the parent
+    ul.prepend(li);
 });
 
