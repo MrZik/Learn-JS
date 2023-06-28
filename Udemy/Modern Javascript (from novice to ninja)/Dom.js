@@ -191,6 +191,8 @@
 
 // returns a node list
 const items = document.querySelectorAll('li');
+//const ul = document.querySelector('ul');
+//ul.remove();
 
 // when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
 // e.target return the <li></li> tag
@@ -198,6 +200,8 @@ items.forEach(item => {
     item.addEventListener('click', e => {
         // console.log(e.target);
         // console.log(item);
-        e.target.style.textDecoration = 'line-through';
+        //e.target.style.textDecoration = 'line-through';
+        e.target.remove();
     });
 });
+
