@@ -245,10 +245,28 @@
 
 // DOM
 
-const copy = document.querySelector('.copy-me');
+// const copy = document.querySelector('.copy-me');
 
-console.log(copy);
+// copy.addEventListener('copy',() => {
+//     console.log('copied');
+// });
 
-copy.addEventListener('copy',() => {
-    console.log('copied');
-});
+// const box = document.querySelector(".box");
+
+// box.addEventListener('mousemove', e => {
+//     //console.log(e.offsetX, e.offsetY);
+//     box.textContent = `X pos - ${e.offsetX} Y pos - ${e.offsetY}`;
+// });
+
+// // add event listener directly to the document object
+// document.addEventListener('wheel', e => {
+//     // this gets the mouse position when you scroll the wheel
+//     // pageX and pageY is similar to offsetX and offsetY
+//     // but is relative to the whole page
+//     console.log(e.pageX,e.pageY);
+// });
+
+
+
+// ***************************************************************************************
+// ***************************************************************************************
