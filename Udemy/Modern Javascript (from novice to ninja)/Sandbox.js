@@ -735,3 +735,26 @@
 
 // ARRAY METHODS
 
+const scores = [10,30,15,25,50,40,5];
+
+// filter is none destructive
+// this returns a new array
+// const filteredScores = scores.filter((score)=>{
+//     return score > 20;
+// });
+
+// // this will still show the original array
+// console.log(scores);
+
+// console.log(filteredScores);
+
+const users =[
+    {name: 'shaun', premium: true},
+    {name: 'yoshi', premium: false},
+    {name: 'mario', premium: false},
+    {name: 'chun-li', premium: true},
+];
+
+const premiumUsers = users.filter(user => user.premium === true);
+
+console.log(premiumUsers);
