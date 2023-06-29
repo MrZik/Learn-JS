@@ -190,32 +190,31 @@
 // });
 
 // returns a node list
-const items = document.querySelectorAll('li');
-const ul = document.querySelector('ul');
-//ul.remove();
+// const items = document.querySelectorAll('li');
+// const ul = document.querySelector('ul');
+// //ul.remove();
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
 
-// when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
-// e.target return the <li></li> tag
-items.forEach(item => {
-    item.addEventListener('click', e => {
-        // console.log(e.target);
-        // console.log(item);
-        //e.target.style.textDecoration = 'line-through';
-        e.target.remove();
-    });
-});
+// // when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
+// // e.target return the <li></li> tag
+// items.forEach(item => {
+//     item.addEventListener('click', e => {
+//         // console.log(e.target);
+//         // console.log(item);
+//         //e.target.style.textDecoration = 'line-through';
+//         e.target.remove();
+//     });
+// });
 
-button.addEventListener('click',() => {
-    //ul.innerHTML += `<li>something new</li>`;
-    // create a new empty <li></li>
-    const li = document.createElement('li');
-    li.textContent = `something new to do`;
-    // takes the li and put it at the end of the tag
-    //ul.append(li);
-    // this puts it on the top of the parent
-    ul.prepend(li);
-});
-
+// button.addEventListener('click',() => {
+//     //ul.innerHTML += `<li>something new</li>`;
+//     // create a new empty <li></li>
+//     const li = document.createElement('li');
+//     li.textContent = `something new to do`;
+//     // takes the li and put it at the end of the tag
+//     //ul.append(li);
+//     // this puts it on the top of the parent
+//     ul.prepend(li);
+// });
