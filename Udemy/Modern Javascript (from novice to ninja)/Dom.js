@@ -189,32 +189,52 @@
 //     console.log('You clicked me.');
 // });
 
+
+const ul = document.querySelector('ul');
+//ul.remove();
+
+ul.addEventListener('click', e => {
+    //console.log('event in ul');
+
+    // this will show the child that was clicked because of the event bubbling  
+    //console.log(e.target.tagName);
+    e.target.tagName === 'LI' && e.target.remove();
+});
+
 // returns a node list
-// const items = document.querySelectorAll('li');
-// const ul = document.querySelector('ul');
-// //ul.remove();
+//const items = document.querySelectorAll('li');
 
-// const button = document.querySelector('button');
-
-
-// // when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
-// // e.target return the <li></li> tag
+// when an event occurs in the browser, it automatically gives us a parameter called 'e' or event
+// e.target return the <li></li> tag
 // items.forEach(item => {
 //     item.addEventListener('click', e => {
 //         // console.log(e.target);
 //         // console.log(item);
 //         //e.target.style.textDecoration = 'line-through';
+
+//         // This stops the event bubbing
+//         e.stopPropagation();
+
 //         e.target.remove();
+//         console.log('event in li');
+        
 //     });
 // });
 
-// button.addEventListener('click',() => {
-//     //ul.innerHTML += `<li>something new</li>`;
-//     // create a new empty <li></li>
-//     const li = document.createElement('li');
-//     li.textContent = `something new to do`;
-//     // takes the li and put it at the end of the tag
-//     //ul.append(li);
-//     // this puts it on the top of the parent
-//     ul.prepend(li);
-// });
+const button = document.querySelector('button');
+
+button.addEventListener('click',() => {
+    //ul.innerHTML += `<li>something new</li>`;
+    // create a new empty <li></li>
+    const li = document.createElement('li');
+    li.textContent = `something new to do`;
+    // takes the li and put it at the end of the tag
+    //ul.append(li);
+    // this puts it on the top of the parent
+    ul.prepend(li);
+});
+
+// Event bubbling
+
+// chid noeds will fire off the events of the parent node as well when triggered
+// ex. console.log('event in li'); then console.log('event in ul');
