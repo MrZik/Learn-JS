@@ -290,3 +290,17 @@
 
 // ***************************************************************************************
 // ***************************************************************************************
+
+const form = document.querySelector('.signup-form'); // . is class
+//const username = document.querySelector('#username'); // because it is an id that's why it's #?????
+
+// submit works for both enter button and when the button submit is clicked
+// the default action of submit is to refresh the page
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    // now we handle the action
+    //console.log(username.value);
+    // it will find the "username" in the tags and match it to this as its value
+    console.log(form.username.value);
+});
+
