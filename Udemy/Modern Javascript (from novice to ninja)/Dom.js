@@ -293,30 +293,41 @@
 
 // FORMS
 
-const form = document.querySelector('.signup-form'); // . is class
-//const username = document.querySelector('#username'); // because it is an id that's why it's #?????
-const feedback = document.querySelector('.feedback');
+// const form = document.querySelector('.signup-form'); // . is class
+// //const username = document.querySelector('#username'); // because it is an id that's why it's #?????
+// const feedback = document.querySelector('.feedback');
+// const usernamePattern = /^[a-zA-Z]{6,12}$/;
 
+// // submit works for both enter button and when the button submit is clicked
+// // the default action of submit is to refresh the page
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     // now we handle the action
+//     //console.log(username.value);
+//     // it will find the "username" in the tags and match it to this as its value
+//     //console.log(form.username.value);
 
-// submit works for both enter button and when the button submit is clicked
-// the default action of submit is to refresh the page
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    // now we handle the action
-    //console.log(username.value);
-    // it will find the "username" in the tags and match it to this as its value
-    //console.log(form.username.value);
+//     const username = form.username.value;
 
-    const username = form.username.value;
-    const pattern = /^[a-zA-Z]{6,12}$/;
+//     if(usernamePattern.test(username)){
+//         feedback.textContent = 'that username is valid.';
+//     } else{
+//         feedback.textContent = 'username must contain letters only and between 6 and 12 characters long.';
+//     }
 
-    if(pattern.test(username)){
-        feedback.textContent = 'that username is valid.';
-    } else{
-        feedback.textContent = 'username must contain letters only and between 6 and 12 characters long.';
-    }
+// });
 
-});
+// live feedback
+// form.username.addEventListener('keyup', e => {
+//     //e.preventDefault();
+//     //console.log(e.target.value, form.username.value);
+    
+//     if(usernamePattern.test(e.target.value)){
+//         form.username.setAttribute('class','success');
+//     }else{
+//         form.username.setAttribute('class','error');
+//     }
+// });
 
 // testing RegEx
 //const username ='shaun21';
@@ -331,3 +342,9 @@ form.addEventListener('submit', e => {
 // it will return 0 because we added ^ and $ in the RegEx
 // let result = username.search(pattern);
 // console.log(result);
+
+
+// ***************************************************************************************
+// ***************************************************************************************
+
+// Ninha interactive quiz
