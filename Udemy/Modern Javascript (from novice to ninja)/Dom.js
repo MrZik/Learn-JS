@@ -190,16 +190,16 @@
 // });
 
 
-const ul = document.querySelector('ul');
-//ul.remove();
+// const ul = document.querySelector('ul');
+// //ul.remove();
 
-ul.addEventListener('click', e => {
-    //console.log('event in ul');
+// ul.addEventListener('click', e => {
+//     //console.log('event in ul');
 
-    // this will show the child that was clicked because of the event bubbling  
-    //console.log(e.target.tagName);
-    e.target.tagName === 'LI' && e.target.remove();
-});
+//     // this will show the child that was clicked because of the event bubbling  
+//     //console.log(e.target.tagName);
+//     e.target.tagName === 'LI' && e.target.remove();
+// });
 
 // returns a node list
 //const items = document.querySelectorAll('li');
@@ -221,20 +221,24 @@ ul.addEventListener('click', e => {
 //     });
 // });
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click',() => {
-    //ul.innerHTML += `<li>something new</li>`;
-    // create a new empty <li></li>
-    const li = document.createElement('li');
-    li.textContent = `something new to do`;
-    // takes the li and put it at the end of the tag
-    //ul.append(li);
-    // this puts it on the top of the parent
-    ul.prepend(li);
-});
+// button.addEventListener('click',() => {
+//     //ul.innerHTML += `<li>something new</li>`;
+//     // create a new empty <li></li>
+//     const li = document.createElement('li');
+//     li.textContent = `something new to do`;
+//     // takes the li and put it at the end of the tag
+//     //ul.append(li);
+//     // this puts it on the top of the parent
+//     ul.prepend(li);
+// });
 
 // Event bubbling
 
 // chid noeds will fire off the events of the parent node as well when triggered
 // ex. console.log('event in li'); then console.log('event in ul');
+
+
+// ***************************************************************************************
+// ***************************************************************************************
