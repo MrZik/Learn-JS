@@ -23,5 +23,5 @@ const getWeather = async(id) => {
     //     throw new Error('cannot fetch data');
     // }
     const data = await response.json();
-    return data;
+    return data[0];
 };
