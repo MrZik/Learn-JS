@@ -995,3 +995,125 @@ const now = new Date();
 // *************************************************************************************************
 
 
+// async and promises
+
+// const getTodos = (resource) => {
+//     return new Promise((resolve,reject) => {
+//         const request = new XMLHttpRequest();
+//         request.addEventListener('readystatechange', () => {
+//             //console.log(request,request.readyState);
+//             // means it's completed
+//             if(request.readyState === 4 && request.status === 200) {
+//                 const data = JSON.parse(request.responseText);
+//                 resolve(data);
+//                 //callback(undefined, data);
+//                 //console.log(request.responseText);
+//             } else if(request.readyState === 4) {
+//                 reject('could not fetch data');
+//                 //callback('could not fetch the data', undefined);
+//                 //console.log('could not fetch the data.');
+//             }
+//         });
+//         //request.open('GET','https://jsonplaceholder.typicode.com/todos/');
+//         request.open('GET', resource);
+//         request.send();
+//     });
+// }
+
+// console.log(1);
+// console.log(2);
+
+// getTodos('luigi.json').then(data => { 
+//     console.log('promise 1 resolved.', data);
+//     return getTodos('mario.json');
+// }).then(data => {
+//     console.log('promise 2 resolved.', data);
+//     return getTodos('shaun.json');
+// }).then(data => {
+//     console.log('promise 3 resolved', data);
+// }).catch(err => console.log('promise rejected:', err));
+
+// callback hell
+// convention error first before data
+// getTodos('luigi.json', (err, data) => {
+//     console.log('callback fired');
+//     if(err){
+//         console.log(err);
+//     } else {
+//         console.log(data);
+//         getTodos('mario.json', (err,data) => {
+//             console.log(data);
+//             getTodos('shaun.json',(err,data) => {
+//                 console.log(data);
+//             });
+//         });
+//     }
+// });
+
+// console.log(3);
+// console.log(4);
+
+// *************************************************************************************************
+// *************************************************************************************************
+
+
+// promise example
+
+// const getSomething = () => {
+//     return new Promise((resolve,reject) => {
+//         // fetch something
+//         //resolve('some data');
+//         reject('some error');
+//     });
+// };
+
+// getSomething().then((data) => console.log(data),
+//     (err) => console.log(err));
+
+// getSomething().then(data => {
+//     console.log(data);
+// }).catch(err => {
+//     console.log(err);
+// });
+
+
+// *************************************************************************************************
+// *************************************************************************************************
+
+// FETCH API
+
+// this returns a promise
+// we get error when we get network errors ex. api cannot be reached
+// fetch('mario.json').then(response => {
+//     console.log('resolved',response);
+//     // this returns a promise
+//     return response.json();
+// }).then(data => {
+//     console.log(data);
+// }).catch(err => {
+//     console('rejected',err);
+// });
+
+// THIS WHAT WE WILL USE FROM NOW ON
+// this now returns a promise because of the async
+// const getTodos = async() => {
+//     const response = await fetch('marios.json');
+
+//     if(response.status != 200){
+//         // this will now become the err.message below
+//         throw new Error('cannot fetch data.');
+//     }
+
+//     const data = await response.json();
+//     return data;
+// };
+
+// console.log(1);
+// console.log(2);
+
+// getTodos()
+//     .then(data => console.log('resolved', data))
+//     .catch(err => console.log('rejected', err.message));
+
+// console.log(3);
+// console.log(4);
