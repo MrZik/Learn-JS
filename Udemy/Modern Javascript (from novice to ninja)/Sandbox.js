@@ -901,7 +901,8 @@ const products = [
 ];
 
 // this returns a new array with the string template as it's value
-const promos = products.filter(product => product.price > 20)
-.map(product => `the ${product.name} is ${product.price / 2}`);
+const promos = products
+    .filter(product => product.price > 20)
+    .map(product => `the ${product.name} is ${product.price / 2} pounds`);
 
 console.log(promos);
