@@ -756,9 +756,15 @@
 // ];
 
 
+// *************************************************************************************************
+// *************************************************************************************************
+
 // Filter Method
 // const premiumUsers = users.filter(user => user.premium === true);
 // console.log(premiumUsers);
+
+// *************************************************************************************************
+// *************************************************************************************************
 
 // Map Method
 // iterates a thru the array and returns a new array
@@ -800,6 +806,9 @@
 // console.log(saleProducts);
 // console.log(products);
 
+// *************************************************************************************************
+// *************************************************************************************************
+
 // Reduce Method
 //const scores = [10, 20, 60, 40, 70 , 90, 30];
 // const result = scores.reduce((acc,curr) => {
@@ -828,12 +837,18 @@
 
 // console.log(marioTotal);
 
+// *************************************************************************************************
+// *************************************************************************************************
+
 // Find method
 // returns the first 'true' value and will not carry on to the rest of the array
 // const scores = [10, 5 ,0, 40, 60, 10, 20, 70];
 // const firstHighScore = scores.find(score => score > 50);
 
 // console.log(firstHighScore);
+
+// *************************************************************************************************
+// *************************************************************************************************
 
 // Sort Method
 // this is destructive
@@ -892,17 +907,70 @@
 // console.log(scores);
 
 // chaining array methods
-const products = [
-    {name: 'gold star', price: 30},
-    {name: 'green shell', price: 10},
-    {name: 'red star', price: 40},
-    {name: 'banana skin', price: 5},
-    {name: 'mushroom', price: 50},
-];
+// const products = [
+//     {name: 'gold star', price: 30},
+//     {name: 'green shell', price: 10},
+//     {name: 'red star', price: 40},
+//     {name: 'banana skin', price: 5},
+//     {name: 'mushroom', price: 50},
+// ];
 
 // this returns a new array with the string template as it's value
-const promos = products
-    .filter(product => product.price > 20)
-    .map(product => `the ${product.name} is ${product.price / 2} pounds`);
+// const promos = products
+//     .filter(product => product.price > 20)
+//     .map(product => `the ${product.name} is ${product.price / 2} pounds`);
 
-console.log(promos);
+// console.log(promos);
+
+
+// *************************************************************************************************
+// *************************************************************************************************
+
+// dates & times
+// date is an object data type
+const now = new Date();
+const before = new Date('February 1 2022 7:30:59');
+
+// console.log(now);
+// years, months, day, times
+// console.log('getFullYear:', now.getFullYear());
+// this returns the index of the month in an array
+// console.log('getMonth:', now.getMonth());
+// console.log('getDate:', now.getDate());
+// sunday - 0
+// console.log('getDay:', now.getDay());
+
+// console.log('getHourse:', now.getHours());
+// console.log('getMinutes:', now.getMinutes());
+// console.log('getSeconds:', now.getSeconds());
+
+// timestamps
+// from 12:00am jan 1 1970
+// console.log('timestamp:', now.getTime());
+
+// date strings
+// console.log(now.toDateString());
+// console.log(now.toTimeString());
+// console.log(now.toLocaleString());
+
+//console.log(now.getTime(), before.getTime());
+
+// const diff = now.getTime() - before.getTime();
+//console.log(diff);
+
+// const mins = Math.round(diff / 1000 / 60);
+// const hrs = Math.round(mins / 60);
+// const days = Math.round(hrs / 24);
+
+// console.log(days , hrs, mins);
+
+// console.log(`the blog was written ${days} days ago.`);
+
+// converting timestamps into date objects
+// const timestamp = 1675938474990;
+// console.log(new Date(timestamp));
+
+
+// *************************************************************************************************
+// *************************************************************************************************
+
