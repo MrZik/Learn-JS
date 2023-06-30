@@ -755,6 +755,9 @@ const users =[
     {name: 'chun-li', premium: true},
 ];
 
-const premiumUsers = users.filter(user => user.premium === true);
 
-console.log(premiumUsers);
+// Filter Method
+// const premiumUsers = users.filter(user => user.premium === true);
+// console.log(premiumUsers);
+
+// Map Method
