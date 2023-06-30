@@ -928,8 +928,8 @@
 
 // dates & times
 // date is an object data type
-const now = new Date();
-const before = new Date('February 1 2022 7:30:59');
+// const now = new Date();
+// const before = new Date('February 1 2022 7:30:59');
 
 // console.log(now);
 // years, months, day, times
@@ -973,4 +973,25 @@ const before = new Date('February 1 2022 7:30:59');
 
 // *************************************************************************************************
 // *************************************************************************************************
+
+const now = new Date();
+
+// console.log(dateFns.isToday(now));
+
+// formatting options
+// console.log(dateFns.format(now, 'YYYY'));
+// console.log(dateFns.format(now, 'MMMM'));
+// console.log(dateFns.format(now, 'dddd'));
+// console.log(dateFns.format(now, 'Do'));
+// console.log(dateFns.format(now, 'dddd - Do - MMMM - YYYY'));
+
+// comparing dates
+// const before = new Date('February 1 2023 12:00:00');
+
+// console.log(dateFns.distanceInWords(now,before, {addSuffix: true}));
+
+
+// *************************************************************************************************
+// *************************************************************************************************
+
 
