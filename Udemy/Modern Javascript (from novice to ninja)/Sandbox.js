@@ -735,7 +735,7 @@
 
 // ARRAY METHODS
 
-const scores = [10,30,15,25,50,40,5];
+//const scores = [10,30,15,25,50,40,5];
 
 // filter is none destructive
 // this returns a new array
@@ -748,12 +748,12 @@ const scores = [10,30,15,25,50,40,5];
 
 // console.log(filteredScores);
 
-const users =[
-    {name: 'shaun', premium: true},
-    {name: 'yoshi', premium: false},
-    {name: 'mario', premium: false},
-    {name: 'chun-li', premium: true},
-];
+// const users =[
+//     {name: 'shaun', premium: true},
+//     {name: 'yoshi', premium: false},
+//     {name: 'mario', premium: false},
+//     {name: 'chun-li', premium: true},
+// ];
 
 
 // Filter Method
@@ -761,3 +761,132 @@ const users =[
 // console.log(premiumUsers);
 
 // Map Method
+// iterates a thru the array and returns a new array
+// Non-destructive
+// the parameter we pass is directly the object not a copy
+//const prices = [20,10,30,25,15,40,80,5];
+// const salePrices = prices.map(price => price / 2);
+// console.log(salePrices);
+
+// const products = [
+//     {name: 'gold star', price: 20},
+//     {name: 'mushroom', price: 40},
+//     {name: 'green shells', price: 30},
+//     {name: 'banana skin', price: 10},
+//     {name: 'red shells', price: 50}
+// ];
+
+// We do not do this, accessing directly the property because this will become destructive
+// we are editing the product.property directly
+// the parameter we pass is directly the object not a copy
+// const saleProducts = products.map(product => {
+//     if(product.price > 30){
+//        product.price /= 2;
+//        return product;
+//     } else{
+//         return product;
+//     }
+// });
+
+// This will not change the original object
+// const saleProducts = products.map(product => {
+//     if(product.price > 30){
+//         return {name: product.name, price: product.price / 2};
+//     } else{
+//         return {name: product.name, price: product.price};
+//     }
+// });
+
+// console.log(saleProducts);
+// console.log(products);
+
+// Reduce Method
+//const scores = [10, 20, 60, 40, 70 , 90, 30];
+// const result = scores.reduce((acc,curr) => {
+//     if(curr > 50){
+//         acc++;
+//     }
+
+//     return acc;
+// }, 0);
+
+// console.log(result);
+
+// const scores = [
+//     {player: 'mario', score: 50},
+//     {player: 'yoshi', score: 30},
+//     {player: 'mario', score: 70},
+//     {player: 'crystal', score: 60},
+// ];
+
+// const marioTotal = scores.reduce((acc,curr) => {
+//     if(curr.player === 'mario'){
+//         acc += curr.score;
+//     }
+//     return acc;
+// }, 0);
+
+// console.log(marioTotal);
+
+// Find method
+// returns the first 'true' value and will not carry on to the rest of the array
+// const scores = [10, 5 ,0, 40, 60, 10, 20, 70];
+// const firstHighScore = scores.find(score => score > 50);
+
+// console.log(firstHighScore);
+
+// Sort Method
+// this is destructive
+// this is destructive
+// sorting strings
+//const names = ['mario','shaun','chun-li','yoshi','luigi'];
+// sorting numbers
+// const scores = [10, 50, 20 , 5, 35, 70, 45];
+// sorting objects
+// const players = [
+//     {name: 'mario', score: 20},
+//     {name: 'luigi', score: 10},
+//     {name: 'chun-li', score: 50},
+//     {name: 'yoshi', score: 30},
+//     {name: 'shaun', score: 70},
+// ];
+// this only takes the first number ei 1 in 10, 5 in 50
+// that's why 10 is first instead of 5
+// scores.sort()
+// scores.reverse();
+// console.log(scores);
+
+// names.sort();
+// names.reverse();
+// console.log(names);
+// a and b can be the first index and second index,
+// or the first index score or the second index score
+// 0 +1 -1
+// if a should go first -1
+// if b +1
+// if no reordering 0
+
+// sort descending order
+// players.sort((a,b) => {
+//     if(a.score > b.score){
+//         return -1;
+//     } else if( b.score > a.score){
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+
+// this is the same as the one above
+// if b is greater than a, then we will get a positive 1
+// meaning b will come first
+// else it will return a -1, meaning a will come first
+// if result is 0, then no change will happen
+// players.sort((a,b) => b.score - a.score);
+
+// console.log(players);
+
+// ascending order
+// always remember when a goes first, it will ascending order
+// scores.sort((a,b) => a - b);
+// console.log(scores);
