@@ -21,3 +21,28 @@ addForm.addEventListener('submit', e => {
         addForm.reset();
     }
 });
+
+// delete todos
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+});
+
+// keyup events
+
+const filtertodos = (term) => {
+    Array.from(list.children)
+    .filter((todo) => !todo.textContent.includes(term))
+    .forEach((todo) => todo.classList.add('filtered'));
+
+    Array.from(list.children)
+    .filter((todo) => todo.textContent.includes(term))
+    .forEach((todo) => todo.classList.remove('filtered'));
+};
+
+const search = document.querySelector('.search input');
+search.addEventListener('keyup', e => {
+    const term = search.value.trim();
+    filtertodos(term);
+});
