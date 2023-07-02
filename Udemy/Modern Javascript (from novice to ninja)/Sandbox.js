@@ -1117,3 +1117,21 @@ const now = new Date();
 
 // console.log(3);
 // console.log(4);
+
+// *************************************************************************************************
+// *************************************************************************************************
+
+// This stays in the browser even if you refresh the page
+
+// store data in local storage
+localStorage.setItem('name','mario');
+localStorage.setItem('age',50);
+
+// get data from local storage
+let name = localStorage.getItem('name');
+
+// updateing data
+// if name exists, it replaces it, else it will create a new key-value pair
+localStorage.setItem('name','shaun');
+
+// deleteing data
