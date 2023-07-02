@@ -58,6 +58,14 @@ cityForm.addEventListener('submit', e => {
     localStorage.setItem('city',city);
 });
 
+// if this exist this will return a strin
+// a string of any length is always true
+if(localStorage.getItem('city')) {
+    updateCity(localStorage.getItem('city'))
+                .then(data => updateUI(data))
+                .catch(err => console.log(err.message)); ;
+}
+
 // TEST IN THE CONSOLE
 // cityForm.addEventListener('submit', e => {
 //     e.preventDefault();
