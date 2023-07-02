@@ -1143,11 +1143,11 @@ const now = new Date();
 // no argumnet, this is like the clear() of list C#
 // localStorage.clear();
 
-const todos = [
-    {text: 'something', author: 'sopmeone'},
-    {text: 'something', author: 'sopmeone'},
-    {text: 'something', author: 'sopmeone'},
-];
+// const todos = [
+//     {text: 'something', author: 'sopmeone'},
+//     {text: 'something', author: 'sopmeone'},
+//     {text: 'something', author: 'sopmeone'},
+// ];
 
 // turns everything inside to a string to be used as a valid jason
 // JSON.stringify(todos);
@@ -1156,4 +1156,10 @@ const todos = [
 
 // this is now an array
 // const stored = localStorage.getItem(JSON.parse('todos'));
+
+
+// *************************************************************************************************
+// *************************************************************************************************
+
+// OOP
 
