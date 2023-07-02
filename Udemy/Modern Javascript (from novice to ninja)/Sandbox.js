@@ -1197,17 +1197,29 @@ class User{
     constructor(name,email){
         this.name = name;
         this.email = email;
+        this.score = 0;
     }
+
+    // Using return 'this' will allow us to chain together functions
+    // because we are returning the object itself.
 
     // we do not use the arrow function
     // because the 'this' keyword will refer to the window object
     // instead of this object instance
     login(){
         console.log(`${this.name} logged in`);
+        return this;
     }
 
     logout(){
         console.log(`${this.name} logged out`);
+        return this;
+    }
+
+    increaseScore(){
+        this.score++;
+        console.log(`${this.name} has a score of ${this.score}`);
+        return this;
     }
 }
 
@@ -1217,3 +1229,4 @@ console.log(user.name);
 console.log(user.email);
 user.login();
 user.logout();
+user.login().increaseScore().increaseScore().logout();
