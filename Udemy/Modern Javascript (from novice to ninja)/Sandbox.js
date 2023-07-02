@@ -1174,4 +1174,20 @@ const now = new Date();
 // this construcs a new object
 // const userTwo = new Object()
 
+// if we want to create a lot of users,
+// we will have to do this all the time normally
+// const userOne = {
+//     username: 'ryu',
+//     email: 'ryi@email.com',
+//     login(){
+//         console.log('logged in');
+//     },
+//     logout(){
+//         console.log('logged out')
+//     }
+// };
+
+// console.log(userOne.username, userOne.email);
+// userOne.login();
+
 
