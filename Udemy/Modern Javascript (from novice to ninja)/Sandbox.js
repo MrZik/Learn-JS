@@ -1133,5 +1133,7 @@ let name = localStorage.getItem('name');
 // updateing data
 // if name exists, it replaces it, else it will create a new key-value pair
 localStorage.setItem('name','shaun');
+// this might not work the same as the one above
+localStorage.age = '40';
 
 // deleteing data
