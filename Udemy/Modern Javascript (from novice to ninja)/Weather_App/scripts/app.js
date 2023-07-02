@@ -44,13 +44,18 @@ const updateCity = async(city) => {
 
 cityForm.addEventListener('submit', e => {
     e.preventDefault();
+
     // get city value
     const city = cityForm.city.value.trim();
     cityForm.reset();
+
     // update ui with the new city
     updateCity(city)
     .then(data => updateUI(data))
     .catch(err => console.log(err.message));
+
+    // set to local storage
+    localStorage.setItem('city',city);
 });
 
 // TEST IN THE CONSOLE
