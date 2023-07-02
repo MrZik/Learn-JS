@@ -8,7 +8,30 @@
 </head>
 <body>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCzt3qSge-hdujxqnDsbR9-MYPy3HRuai4",
+          authDomain: "javascript-7ee15.firebaseapp.com",
+          projectId: "javascript-7ee15",
+          storageBucket: "javascript-7ee15.appspot.com",
+          messagingSenderId: "1051780484816",
+          appId: "1:1051780484816:web:793eee7a751dc0599c18d5",
+          measurementId: "G-Z66Y9CF4P2"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
     <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
-    <script src="Sandbox.js"></script>
+    <script src="Firebase.js"></script>
 </body>
 </html>
