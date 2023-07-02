@@ -1289,6 +1289,7 @@ User.prototype.logout = function(){
 }
 
 function Admin(username, email,title) {
+    // inherit from User constructor
     // first param is the context for the this keyword
     // what the this keyword refers to
     // we pass this so we can refer to the object we created
@@ -1300,6 +1301,7 @@ function Admin(username, email,title) {
 // Creates a new object
 // we now have a copy of the User.prototype
 // inside the Admin.prototype
+// This is what happens behind the class inheritance
 Admin.prototype = Object.create(User.prototype);
 
 Admin.prototype.deleteUser = function(){
