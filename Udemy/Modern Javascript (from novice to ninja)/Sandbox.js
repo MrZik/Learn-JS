@@ -1270,6 +1270,9 @@ function User(username, email) {
     // }
 };
 
+// Prototype
+
+// Prototype contain all the moethods for that object type
 
 // This now stores login function in the protype
 // this is stored only in one place and the new instance
@@ -1285,15 +1288,34 @@ User.prototype.logout = function(){
     return this;
 }
 
+function Admin(username, email,title) {
+    // first param is the context for the this keyword
+    // what the this keyword refers to
+    // we pass this so we can refer to the object we created
+    // ei the new Admin object
+    User.call(this, username, email);
+    this.title = title;
+};
+
+// Creates a new object
+// we now have a copy of the User.prototype
+// inside the Admin.prototype
+Admin.prototype = Object.create(User.prototype);
+
+Admin.prototype.deleteUser = function(){
+    // delete a user
+};
+
 const userOne = new User('ruy','ruy@email.com');
 const userTwo = new User('mik','mik@email.com');
+const userThree = new Admin('chiu','chiu@email.com','black-belt-ninja');
 
-console.log(userOne,userTwo);
+console.log(userOne,userTwo,userThree);
 userOne.login();
-
-// Prototype
-
-// Prototype contain all the moethods for that object type
+// this is actually pointing to the User.proto
+// because we are inherting
+// there will now be 2 __proto__ when we check it in the browser console
+userThree.login();
 
 
 // *************************************************************************************************
