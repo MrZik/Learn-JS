@@ -1233,12 +1233,18 @@ class User{
 // user.login().increaseScore().increaseScore().logout();
 
 class Admin extends User {
+    constructor(name, email, title) {
+        // looks at the parent class then the constructor
+        super(name, email);
+        this.title = title;
+    }
+
     deleteUser(user){
         users = users.filter(u => u.name !== user.name);
     }
 }
 
-const userThree = new Admin('shaun','shaun@email.com');
+const userThree = new Admin('shaun','shaun@email.com','manager');
 console.log(userThree);
 userThree.login();
 
@@ -1246,3 +1252,4 @@ let users = [userOne,userTwo,userThree];
 
 userThree.deleteUser(userTwo);
 console.log(users);
+console.log(userThree.title)
