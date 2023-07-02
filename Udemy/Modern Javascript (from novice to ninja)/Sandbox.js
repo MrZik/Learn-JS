@@ -1163,3 +1163,15 @@ const now = new Date();
 
 // OOP
 
+// create a new array
+// this is the constructor of the array class
+// const ages = new Array(20,10,25,35);
+
+// const names = ['shaun','mario'];
+
+// const userOne = {}
+// object literal
+// this construcs a new object
+// const userTwo = new Object()
+
+
