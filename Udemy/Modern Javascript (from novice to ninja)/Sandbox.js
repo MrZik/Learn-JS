@@ -1122,18 +1122,38 @@ const now = new Date();
 // *************************************************************************************************
 
 // This stays in the browser even if you refresh the page
+// storaging values will become a string
 
 // store data in local storage
-localStorage.setItem('name','mario');
-localStorage.setItem('age',50);
+// localStorage.setItem('name','mario');
+// localStorage.setItem('age',50);
 
 // get data from local storage
-let name = localStorage.getItem('name');
+// let name = localStorage.getItem('name');
 
 // updateing data
 // if name exists, it replaces it, else it will create a new key-value pair
-localStorage.setItem('name','shaun');
+// localStorage.setItem('name','shaun');
 // this might not work the same as the one above
-localStorage.age = '40';
+// localStorage.age = '40';
 
 // deleteing data
+// key param
+// localStorage.removeItem('name');
+// no argumnet, this is like the clear() of list C#
+// localStorage.clear();
+
+const todos = [
+    {text: 'something', author: 'sopmeone'},
+    {text: 'something', author: 'sopmeone'},
+    {text: 'something', author: 'sopmeone'},
+];
+
+// turns everything inside to a string to be used as a valid jason
+// JSON.stringify(todos);
+
+// localStorage.setItem('todos',JSON.stringify(todos));
+
+// this is now an array
+// const stored = localStorage.getItem(JSON.parse('todos'));
+
