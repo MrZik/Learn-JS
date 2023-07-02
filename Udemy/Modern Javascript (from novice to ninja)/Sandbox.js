@@ -1193,38 +1193,36 @@ const now = new Date();
 // if we have a class, we can do this
 // const userThree = new User('shaun','shaun@mail.com');
 
-class User{
-    constructor(name,email){
-        this.name = name;
-        this.email = email;
-        this.score = 0;
-    }
+// class User{
+//     constructor(name,email){
+//         this.name = name;
+//         this.email = email;
+//         this.score = 0;
+//     }
 
-    // Using return 'this' will allow us to chain together functions
-    // because we are returning the object itself.
+//     // Using return 'this' will allow us to chain together functions
+//     // because we are returning the object itself.
 
-    // we do not use the arrow function
-    // because the 'this' keyword will refer to the window object
-    // instead of this object instance
-    login(){
-        console.log(`${this.name} logged in`);
-        return this;
-    }
+//     // we do not use the arrow function
+//     // because the 'this' keyword will refer to the window object
+//     // instead of this object instance
+//     login(){
+//         console.log(`${this.name} logged in`);
+//         return this;
+//     }
 
-    logout(){
-        console.log(`${this.name} logged out`);
-        return this;
-    }
+//     logout(){
+//         console.log(`${this.name} logged out`);
+//         return this;
+//     }
 
-    increaseScore(){
-        this.score++;
-        console.log(`${this.name} has a score of ${this.score}`);
-        return this;
-    }
-}
+//     increaseScore(){
+//         this.score++;
+//         console.log(`${this.name} has a score of ${this.score}`);
+//         return this;
+//     }
+// }
 
- const userOne = new User('ruy','ruy@email.com');
- const userTwo = new User('mik','mik@email.com');
 // console.log(user);
 // console.log(user.name);
 // console.log(user.email);
@@ -1232,24 +1230,46 @@ class User{
 // user.logout();
 // user.login().increaseScore().increaseScore().logout();
 
-class Admin extends User {
-    constructor(name, email, title) {
-        // looks at the parent class then the constructor
-        super(name, email);
-        this.title = title;
+// class Admin extends User {
+//     constructor(name, email, title) {
+//         // looks at the parent class then the constructor
+//         super(name, email);
+//         this.title = title;
+//     }
+
+//     deleteUser(user){
+//         users = users.filter(u => u.name !== user.name);
+//     }
+// }
+
+// const userThree = new Admin('shaun','shaun@email.com','manager');
+// console.log(userThree);
+// userThree.login();
+
+// let users = [userOne,userTwo,userThree];
+
+// userThree.deleteUser(userTwo);
+// console.log(users);
+// console.log(userThree.title)
+
+// old way of constructor
+// under the hood
+function User(username, email) {
+    this.username = username;
+    this.email = email;
+
+    // This functions are now inside the constructor
+    this.login = function(){
+        console.log(`${this.username} has logged in.`);
     }
 
-    deleteUser(user){
-        users = users.filter(u => u.name !== user.name);
+    this.logout = function(){
+        console.log(`${this.username} has logged out`);
     }
-}
+};
 
-const userThree = new Admin('shaun','shaun@email.com','manager');
-console.log(userThree);
-userThree.login();
+const userOne = new User('ruy','ruy@email.com');
+const userTwo = new User('mik','mik@email.com');
 
-let users = [userOne,userTwo,userThree];
-
-userThree.deleteUser(userTwo);
-console.log(users);
-console.log(userThree.title)
+console.log(userOne,userTwo);
+userOne.login();
