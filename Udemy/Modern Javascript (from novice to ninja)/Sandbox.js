@@ -1190,4 +1190,26 @@ const now = new Date();
 // console.log(userOne.username, userOne.email);
 // userOne.login();
 
+// if we have a class, we can do this
+// const userThree = new User('shaun','shaun@mail.com');
 
+class User{
+    constructor(name,email){
+        this.name = name;
+        this.email = email;
+    }
+
+    login(){
+        console.log('logged in');
+    }
+
+    logout(){
+        console.log('logged out');
+    }
+}
+
+const user = new User('shaun','shaun@email.com');
+console.log(user);
+console.log(user.name);
+console.log(user.email);
+user.login();
