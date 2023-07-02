@@ -1223,10 +1223,26 @@ class User{
     }
 }
 
-const user = new User('shaun','shaun@email.com');
-console.log(user);
-console.log(user.name);
-console.log(user.email);
-user.login();
-user.logout();
-user.login().increaseScore().increaseScore().logout();
+ const userOne = new User('ruy','ruy@email.com');
+ const userTwo = new User('mik','mik@email.com');
+// console.log(user);
+// console.log(user.name);
+// console.log(user.email);
+// user.login();
+// user.logout();
+// user.login().increaseScore().increaseScore().logout();
+
+class Admin extends User {
+    deleteUser(user){
+        users = users.filter(u => u.name !== user.name);
+    }
+}
+
+const userThree = new Admin('shaun','shaun@email.com');
+console.log(userThree);
+userThree.login();
+
+let users = [userOne,userTwo,userThree];
+
+userThree.deleteUser(userTwo);
+console.log(users);
