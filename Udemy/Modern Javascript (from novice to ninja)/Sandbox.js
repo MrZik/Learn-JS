@@ -1194,6 +1194,9 @@ const now = new Date();
 // const userThree = new User('shaun','shaun@mail.com');
 
 // class User{
+        // classes automatically puts
+        // these functions in the __proto__
+//
 //     constructor(name,email){
 //         this.name = name;
 //         this.email = email;
@@ -1259,17 +1262,39 @@ function User(username, email) {
     this.email = email;
 
     // This functions are now inside the constructor
-    this.login = function(){
-        console.log(`${this.username} has logged in.`);
-    }
-
-    this.logout = function(){
-        console.log(`${this.username} has logged out`);
-    }
+    // or object
+    // unlike classes, classes automatically puts
+    // these functions in the __proto__
+    // this.login = function(){
+    //     console.log(`${this.username} has logged in.`);
+    // }
 };
+
+
+// This now stores login function in the protype
+// this is stored only in one place and the new instance
+// wil just have a pointer to it
+// adding return this will allow chaining of fn()
+User.prototype.login = function() {
+    console.log(`${this.username} has logged in.`);
+    return this;
+};
+
+User.prototype.logout = function(){
+    console.log(`${this.username} has logged out.`);
+    return this;
+}
 
 const userOne = new User('ruy','ruy@email.com');
 const userTwo = new User('mik','mik@email.com');
 
 console.log(userOne,userTwo);
 userOne.login();
+
+// Prototype
+
+// Prototype contain all the moethods for that object type
+
+
+// *************************************************************************************************
+// *************************************************************************************************
