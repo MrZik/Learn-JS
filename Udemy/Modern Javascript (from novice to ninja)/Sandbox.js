@@ -1199,12 +1199,15 @@ class User{
         this.email = email;
     }
 
+    // we do not use the arrow function
+    // because the 'this' keyword will refer to the window object
+    // instead of this object instance
     login(){
-        console.log('logged in');
+        console.log(`${this.name} logged in`);
     }
 
     logout(){
-        console.log('logged out');
+        console.log(`${this.name} logged out`);
     }
 }
 
@@ -1213,3 +1216,4 @@ console.log(user);
 console.log(user.name);
 console.log(user.email);
 user.login();
+user.logout();
