@@ -1302,7 +1302,7 @@ function Admin(username, email,title) {
 // we now have a copy of the User.prototype
 // inside the Admin.prototype
 // This is what happens behind the class inheritance
-Admin.prototype = Object.create(User.prototype);
+//Admin.prototype = Object.create(User.prototype);
 
 Admin.prototype.deleteUser = function(){
     // delete a user
