@@ -7,6 +7,7 @@
     font-size: 20px;
 }
 .video-title{
+    width: 300px;
     margin-top: 0;
 }
 .video-preview{
@@ -18,20 +19,9 @@
 .channel-picture{
     vertical-align: top;
     display: inline-block;
-    width: 50px;
-}
-.video-stats {
-    font-size: 14px;
-    color: rgb(96, 96, 96);
-}
-.video-author{
-    color: rgb(96, 96, 96);
-    font-size: 14px;
+    width: 10%;
 }
 .video-info{
     display: inline-block;
     width: 200px;
-}
-.profile-picture{
-    width: 100%;
 }
