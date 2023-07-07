@@ -1,17 +1,9 @@
-p{
-    font-family: Roboto,Arial;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
 .thumbnail{
     width: 100%;
 }
 .thumbnail-row{
     margin-bottom: 12px;
-}
-.search-bar{
-    display: block;
-    font-size: 20px;
 }
 .video-title{
     font-size: 14px;
@@ -44,4 +36,7 @@ p{
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 25px;
     row-gap: 40px;
+}
+.header{
+
 }
