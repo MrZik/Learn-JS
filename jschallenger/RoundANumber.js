@@ -7,10 +7,26 @@
 // Return the rounded number
 
 function myFunction(a){
+    let negative = false;
+    if(a < 0){
+        negative = true;
+        a *= -1;
+    }
+
     let b = parseFloat((a * 100).toFixed(11));
+    b = Math.round(b) / 100;
+
+    if(negative) {
+        b *= -1;
+    }
+
+    // jsChallenger answer
+    // return Number(a.toFixed(2));
+
     // We don't need the toFixed here because we made sure to have 2 decimal pts using the value 100
     //return (Math.round(b) / 100).toFixed(2);
-    return Math.round(b) / 100;
+    //return Math.round(b) / 100;
+    return b;
 }
 
 console.log(myFunction(2.12397));
