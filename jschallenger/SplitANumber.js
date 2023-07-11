@@ -7,7 +7,9 @@
 // Tipp: you might want to change the type of the number for the splitting
 
 function myFunction(a) {
+    //jschallenger answer
     //return stringArray = a.toString().split('').map(x => Number(x));
+    
     //return [...a+''].map(x =>+x);
 
     let num = a;
