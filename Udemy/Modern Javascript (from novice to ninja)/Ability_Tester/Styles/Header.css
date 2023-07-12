@@ -1,0 +1,26 @@
+.header{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: black;
+
+    
+}
+.middle-section {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    
+    background-color: red;
+
+    height: 30px;
+    max-width: 1010px;
+    margin:0 auto;
+}
