@@ -223,9 +223,34 @@ h1 {
     text-decoration: none;
     color: rgb(69, 177, 255);
 }
+@media screen and (max-width: 1400px) {
+    .app__links_container {
+        width: 97%;
+    }
+    .app__footer_container {
+        width: 97%;
+    }
+}
 
-/* Mobile phones */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1000px) {
+    .app__links_container {
+        width: 97%;
+    }
+    .app__footer_container {
+        width: 97%;
+    }
+    .item_description {
+        padding: 0 5 0 5px;
+    }
+    .item_description h1 {
+        font-size: 1.7em;
+    }
+    .item_description p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 780px) {
     .app__header {
         height: 100%;
         width: 100%;
