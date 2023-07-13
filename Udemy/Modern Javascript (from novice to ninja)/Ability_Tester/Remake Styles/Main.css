@@ -1,17 +1,17 @@
-body{
+body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-p{
+p {
     font-family: Roboto,Arial;
     margin: 0;
 }
-h1{
+h1 {
     font-family: Roboto,Arial;
     margin: 0;
 }
-.root{
+.root {
     height: max-content;
     width: 100%;
 
@@ -24,7 +24,7 @@ h1{
 
     background-color: rgb(217, 228, 238);
 }
-.app__navbar{
+.app__navbar {
     height: 60px;
     width: 100%;
     position: fixed;
@@ -34,7 +34,7 @@ h1{
     align-items: center;
     justify-content: center;
 }
-.app__navbar_container{
+.app__navbar_container {
     height: 100%;
     width: 100%;
 
@@ -46,7 +46,7 @@ h1{
 
     background-color: white;
 }
-.home_button{
+.home_button {
     height: 100%;
     padding: 0 20px;
 
@@ -57,15 +57,15 @@ h1{
 
     cursor: pointer;
 }
-.home_button:hover{
+.home_button:hover {
     background-color: rgba(206, 206, 206, 0.5);
 }
-.home_button p{
+.home_button p {
     font-size: 1.4em;
     font-weight: 400;
     color:rgb(10, 110, 110)y;
 }
-.app__header{
+.app__header {
     height: 540px;
     width: 100%;
     padding: 40 0px;
@@ -80,25 +80,25 @@ h1{
 
     background-color: rgb(43, 135, 209);
 }
-.app__header_container{
+.app__header_container {
     height: 100%;
     width: 100%;
 }
-.app__header_container h1{
+.app__header_container h1 {
     font-size: 7em;
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 0px;
     color: white
 }
-.app__header_container p{
+.app__header_container p {
     font-size: 1.8em;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 25px;
     color: white
 }
-.app__header_container button{
+.app__header_container button {
     height: 65px;
     width: 180px;
 
@@ -112,11 +112,11 @@ h1{
     background-color: rgb(255, 209, 84);
     cursor: pointer;
 }
-.app__header_container button:hover{
+.app__header_container button:hover {
     background-color: white;
-    transition: linear 0.25s;
+    transition: linear 0.2s;
 }
-.app__links{
+.app__links {
     height: max-content;
     width: 100%;
     
@@ -125,7 +125,7 @@ h1{
     align-items: flex-start;
     justify-content: center;
 }
-.app__links_container{
+.app__links_container {
     height: max-content;
     width: 55%;
     
@@ -135,7 +135,7 @@ h1{
     justify-content: flex-start;
     gap: 20px;
 }
-.app__link_subcontainer{
+.app__link_subcontainer {
     height: max-content;
     width:100%;
 
@@ -145,7 +145,7 @@ h1{
     justify-content: center;
     gap: 20px;
 }
-.item{
+.item {
     height: 350px;
 
     display:flex;
@@ -163,38 +163,38 @@ h1{
 
     transition: linear 0.15s;
 }
-.item:hover{
+.item:hover {
     transform: translate(0,-10px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.item img{
+.item img {
     height: 47%;
     min-height: 158px;
     margin-top: 0;
     padding: 40 0 8 0px;
 }
-.item_description{
+.item_description {
     padding: 0 20 35 20px;
     text-align: center;
 }
-.item_description h1{
+.item_description h1 {
     font-size: 1.85em;
     margin-bottom:10px;
     color: rgb(30, 30, 30);
 }
-.item_description p{
+.item_description p {
     font-size: 1.4em;
     color: rgb(78, 78, 78);
 }
-.item_end{
+.item_end {
     min-width: 274px;
     flex: 2;
 }
-.item_end img{
+.item_end img {
     height: 50%;
     margin-bottom: 15px;
 }
-.app__footer{
+.app__footer {
     height: max-content;
     width: 100%;
 
@@ -204,7 +204,7 @@ h1{
     justify-content: center;
     margin-bottom: 105px;
 }
-.app__footer_container{
+.app__footer_container {
     height: max-content;
     width: 55%;
 
@@ -214,12 +214,63 @@ h1{
     justify-content: flex-end;
     gap: 10px;
 }
-.app__footer_container p{
+.app__footer_container p {
     font-size: 1.09em;
     color: rgb(110, 110, 110);
 }
-.app__footer_container a{
+.app__footer_container a {
     font-size: 1.08em;
     text-decoration: none;
     color: rgb(69, 177, 255);
+}
+
+/* Mobile phones */
+@media screen and (max-width: 550px) {
+    .app__header {
+        height: 100%;
+        width: 100%;
+    }
+    .app__header_container h1 {
+        font-size: 5em;
+    }
+    .app__header_container p {
+        font-size: 1.8em;
+    }
+    .app__links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app__links_container {
+        width: 100%;
+    }
+    .app__link_subcontainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        height: max-content;
+        width: 92%;
+
+        flex-direction: row;
+        align-items: flex-start;
+
+        border-radius: 0px;
+    }
+    .item_end {
+        min-width: 0px;
+        flex: 2;
+    }
+    .item img {
+        margin-left: 15px;
+        padding: 15 0px;
+    }
+    .item_description {
+        text-align: left;
+        padding: 35 15 15 0px;
+        margin-left: 15px;
+    }
+    .app__footer_container {
+        width: 92%;
+    }
 }
