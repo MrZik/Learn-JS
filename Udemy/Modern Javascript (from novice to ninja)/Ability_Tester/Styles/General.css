@@ -97,7 +97,7 @@ p{
 }
 .app__links_container{
     height: max-content;
-    width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
