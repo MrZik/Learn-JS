@@ -175,6 +175,11 @@ h1 {
     min-height: 158px;
     margin-top: 0;
     padding: 40 0 8 0px;
+    transition: linear 0.15s;
+}
+.item img:hover {
+    -webkit-filter: brightness(0.6)contrast(3.4)hue-rotate(150deg)saturate(9.9);
+    filter: brightness(0.6)contrast(3.4)hue-rotate(150deg)saturate(9.9);
 }
 .item_description {
     padding: 0 20 35 20px;
