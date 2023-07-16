@@ -13,4 +13,4 @@ import "./style.css";
 //   `;
 // });
 
-// setupCounter(document.querySelector("#counter"));
+setupCounter(document.querySelector("#counter"));
