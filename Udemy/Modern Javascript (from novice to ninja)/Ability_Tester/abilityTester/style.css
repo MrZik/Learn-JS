@@ -178,7 +178,6 @@ h1 {
   transition: linear 0.15s;
 }
 .item img:hover {
-  -webkit-filter: brightness(0.6) contrast(3.4) hue-rotate(150deg) saturate(9.9);
   filter: brightness(0.6) contrast(3.4) hue-rotate(150deg) saturate(9.9);
 }
 .item_description {
