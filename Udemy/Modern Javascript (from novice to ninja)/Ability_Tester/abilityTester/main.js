@@ -1,4 +1,12 @@
-import "./style.css";
+import "./css/staticstyle.css";
+import "./scripts/navbar.js";
+import "./css/header.css";
+import "./scripts/headerhome.js";
+
+//import headerhome from "./css/headerhome.module.css";
+
+// document.querySelector("header").className = headerhome.app__header;
+
 // import { pi, piSquared } from "./constants";
 // import { setupCounter } from "./counter";
 
