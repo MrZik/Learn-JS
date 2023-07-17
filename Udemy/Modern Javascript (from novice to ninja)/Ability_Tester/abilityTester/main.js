@@ -2,6 +2,7 @@ import "./css/staticstyle.css";
 import "./scripts/navbar.js";
 import "./css/header.css";
 import "./scripts/headerhome.js";
+import "./scripts/footer.js";
 
 //import headerhome from "./css/headerhome.module.css";
 
