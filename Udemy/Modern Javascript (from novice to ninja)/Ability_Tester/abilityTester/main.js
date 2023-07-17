@@ -1,7 +1,10 @@
 import "./css/staticstyle.css";
+import "./css/mediascreens.css";
 import "./scripts/navbar.js";
 import "./css/header.css";
 import "./scripts/headerhome.js";
+// add app__links here
+// think of another name maybe?
 import "./scripts/footer.js";
 
 //import headerhome from "./css/headerhome.module.css";
