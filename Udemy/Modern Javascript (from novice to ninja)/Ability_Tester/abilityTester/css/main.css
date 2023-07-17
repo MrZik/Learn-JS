@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+p {
+  font-family: Roboto, Arial;
+  margin: 0;
+}
+h1 {
+  font-family: Roboto, Arial;
+  margin: 0;
+}
+#app {
+  height: max-content;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 30px;
+
+  background-color: rgb(217, 228, 238);
+}
