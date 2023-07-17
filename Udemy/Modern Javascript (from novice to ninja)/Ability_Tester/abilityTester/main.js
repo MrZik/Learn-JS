@@ -1,12 +1,11 @@
 import "./css/main.css";
-import "./css/mediascreens.css";
 import "./scripts/navbar.js";
 import "./css/header.css";
 import "./scripts/headerhome.js";
-import "./scripts/links.js";
+import { initializeLinks } from "./scripts/links.js";
 import "./scripts/footer.js";
 
-//import headerhome from "./css/headerhome.module.css";
+initializeLinks();
 
 // document.querySelector("header").className = headerhome.app__header;
 
