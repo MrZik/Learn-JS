@@ -2,8 +2,6 @@ import "../css/links.css";
 const maxItemsPerContainer = 3;
 let gamesArray = "";
 let linksCount = 8;
-let totalSubcontainerCount = 0;
-let subcontainers = [];
 
 const getGamesAvailable = async function () {
   const response = await fetch("/games.json");
@@ -29,41 +27,16 @@ const createItem = function (title, description, imgUrl, href = "#") {
   return item;
 };
 
-const createSubContainers = function () {
-  const container = document.querySelector("#links_container");
-
-  const containerCount = linksCount / maxItemsPerContainer;
-  let countFloor = Math.floor(containerCount);
-
-  for (let i = 0; i < countFloor; ++i) {
-    totalSubcontainerCount++;
-
-    container.innerHTML += `
-          <div class="app__link_subcontainer" id="subcontainer${i}">
-          </div>
-      `;
-
-    subcontainers.push(`subcontainer${i}`);
-  }
-
-  if (containerCount % 1 != 0) {
-    totalSubcontainerCount++;
-
-    container.innerHTML += `
-          <div class="app__link_subcontainer" id="subcontainer${countFloor}">
-          </div>
-      `;
-
-    subcontainers.push(`subcontainer${countFloor}`);
-  }
-};
-
-const addtems = function () {
+const createhtml = function () {
   let currentContainerCount = 0;
+  let container = document.querySelector("#links_container");
+  let htmlToAdd = "";
 
-  let container = document.querySelector(
-    `#${subcontainers[currentContainerCount]}`
-  );
+  htmlToAdd += `
+    <div class="app__link_subcontainer" id="subcontainer${currentContainerCount}">
+  `;
+
+  currentContainerCount++;
 
   for (let i = 0; i < linksCount; i++) {
     let component = createItem(
@@ -73,31 +46,25 @@ const addtems = function () {
       gamesArray[i].href
     );
 
-    container.innerHTML += `${component}`;
+    htmlToAdd += component;
 
-    if (i % maxItemsPerContainer == 0) {
-      currentContainerCount += 1;
-      if (currentContainerCount > subcontainers.length) continue;
-
-      console.log(`current container count updated: ${currentContainerCount}`);
-
-      container = document.querySelector(
-        `#${subcontainers[currentContainerCount]}`
-      );
-
-      console.log(`${container.id}`);
+    if ((i + 1) % maxItemsPerContainer === 0 && i !== 0) {
+      htmlToAdd += `</div>`;
+      ++currentContainerCount;
+      htmlToAdd += `<div class="app__link_subcontainer" id="subcontainer${currentContainerCount}">`;
     }
   }
+
+  container.innerHTML = htmlToAdd;
 };
 
 const initializeLinks = function () {
-  createSubContainers();
   getGamesAvailable()
     .then((data) => {
       gamesArray = data;
       linksCount = data.length;
 
-      addtems();
+      createhtml();
     })
     .catch((err) => console.log(err.message));
 };
