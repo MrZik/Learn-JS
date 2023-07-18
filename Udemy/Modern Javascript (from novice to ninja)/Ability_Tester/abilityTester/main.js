@@ -1,9 +1,9 @@
-import "./css/main.css";
-import "./scripts/navbar.js";
-import "./css/header.css";
-import "./scripts/headerhome.js";
-import { initializeLinks } from "./scripts/links.js";
-import "./scripts/footer.js";
+import "./assets/style/main.css";
+import "./assets/scripts/navbar.js";
+import "./assets/style/header.css";
+import "./assets/scripts/headerhome.js";
+import { initializeLinks } from "./assets/scripts/links.js";
+import "./assets/scripts/footer.js";
 
 initializeLinks();
 

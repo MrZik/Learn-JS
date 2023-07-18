@@ -26,3 +26,21 @@
   font-size: 1.08rem;
   color: rgb(69, 177, 255);
 }
+
+@media screen and (max-width: 1650px) {
+  .app__footer_container {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__footer_container {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .app__footer_container {
+    width: 92%;
+  }
+}

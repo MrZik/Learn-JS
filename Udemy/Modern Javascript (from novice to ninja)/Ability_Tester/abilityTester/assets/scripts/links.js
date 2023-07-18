@@ -1,4 +1,4 @@
-import "../css/links.css";
+import "../style/links.css";
 const maxItemsPerContainer = 3;
 let gamesArray = "";
 let linksCount = 8;

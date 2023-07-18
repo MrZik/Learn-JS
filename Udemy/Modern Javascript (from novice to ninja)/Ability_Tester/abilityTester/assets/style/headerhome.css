@@ -1,15 +1,16 @@
 .app__header_container img {
-  width: 300px;
+  padding-top: 10px;
+  width: 280px;
 }
 .app__header_container h1 {
-  font-size: 7rem;
+  font-size: 5.5rem;
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 0px;
   color: white;
 }
 .app__header_container p {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 25px;
@@ -32,4 +33,20 @@
 .app__header_container button:hover {
   background-color: white;
   transition: linear 0.2s;
+}
+
+@media screen and (max-width: 780px) {
+  .app__header {
+    height: 100%;
+    width: 100%;
+  }
+  .app__header_container img {
+    width: 250px;
+  }
+  .app__header_container h1 {
+    font-size: 4rem;
+  }
+  .app__header_container p {
+    font-size: 1.7rem;
+  }
 }

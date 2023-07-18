@@ -1,4 +1,4 @@
-import "../css/footer.css";
+import "../style/footer.css";
 
 export const footer = (document.querySelector("footer").innerHTML = `
     <div class="app__footer_container">

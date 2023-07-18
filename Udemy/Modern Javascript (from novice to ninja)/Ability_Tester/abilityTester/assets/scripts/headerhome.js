@@ -1,4 +1,4 @@
-import "../css/headerhome.css";
+import "../style/headerhome.css";
 
 export const homeDetails = (document.querySelector("header").innerHTML = `
     <div class="app__header_container">

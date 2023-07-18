@@ -1,4 +1,4 @@
-import "../css/navbar.css";
+import "../style/navbar.css";
 
 export const navbar = (document.querySelector("nav").innerHTML = `
     <div class="app__navbar_container">
