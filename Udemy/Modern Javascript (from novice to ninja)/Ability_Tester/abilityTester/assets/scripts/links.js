@@ -65,6 +65,7 @@ const initializeLinks = function () {
       linksCount = data.length;
 
       createhtml();
+      // add on click to buttons after?
     })
     .catch((err) => console.log(err.message));
 };
