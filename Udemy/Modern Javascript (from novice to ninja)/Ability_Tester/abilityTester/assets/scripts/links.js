@@ -1,7 +1,9 @@
 import "../style/links.css";
+import { handleOnGameClicked } from "./gameshandler.js";
 const maxItemsPerContainer = 3;
 let gamesArray = "";
 let linksCount = 8;
+let btnIdTemplate = `btn`;
 
 const getGamesAvailable = async function () {
   const response = await fetch("/games.json");
@@ -13,9 +15,9 @@ const getGamesAvailable = async function () {
   return await response.json();
 };
 
-const createItem = function (title, description, imgUrl, href = "#") {
+const createItem = function (title, description, imgUrl, href = "#", btnId) {
   let item = `
-        <a class="item" href="${href}">
+        <a class="item" href="${href}" id="${btnId}">
             <img src="${imgUrl}" alt="img" />
             <div class="item_description">
             <h1>${title}</h1>
@@ -43,7 +45,8 @@ const createhtml = function () {
       gamesArray[i].title,
       gamesArray[i].description,
       gamesArray[i].imgUrl,
-      gamesArray[i].href
+      gamesArray[i].href,
+      `${btnIdTemplate}${i}`
     );
 
     htmlToAdd += component;
@@ -58,6 +61,21 @@ const createhtml = function () {
   container.innerHTML = htmlToAdd;
 };
 
+const addOnClickEventsInButtons = function () {
+  let btn = "";
+  for (let i = 0; i < linksCount; i++) {
+    btn = document.getElementById(`${btnIdTemplate}${i}`);
+
+    btn.addEventListener("click", () => {
+      handleOnGameClicked(
+        gamesArray[i].imgUrlWhite,
+        gamesArray[i].title,
+        gamesArray[i].instruction
+      );
+    });
+  }
+};
+
 const initializeLinks = function () {
   getGamesAvailable()
     .then((data) => {
@@ -65,7 +83,7 @@ const initializeLinks = function () {
       linksCount = data.length;
 
       createhtml();
-      // add on click to buttons after?
+      addOnClickEventsInButtons();
     })
     .catch((err) => console.log(err.message));
 };

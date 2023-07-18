@@ -3,48 +3,64 @@
     "title": "Reaction Time",
     "description": "Test your visual reflexes.",
     "imgUrl": "./assets/imgs/original/rush-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/rush-white.svg",
+    "href": "#",
+    "instruction": "When the red box turns green, click as quickly as you can. Click anywhere to start."
   },
   {
     "title": "Sequence Memory",
     "description": "Remember and increasingly long pattern of button presses.",
     "imgUrl": "./assets/imgs/original/visualization-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/visualization-white.svg",
+    "href": "#",
+    "instruction": "Memorize the pattern and click sequentially."
   },
   {
     "title": "Aim Trainer",
     "description": "How quickly can you hit all targets?",
     "imgUrl": "./assets/imgs/original/target-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/target-white.svg",
+    "href": "#",
+    "instruction": "Hit the targets as quickly as you can. Click anywhere to start."
   },
   {
     "title": "Number Memory",
     "description": "Remember the longest number you can.",
     "imgUrl": "./assets/imgs/original/cubes-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/cubes-white.svg",
+    "href": "#",
+    "instruction": "The average person can remember 7 numbers at once. Can you do more?"
   },
   {
     "title": "Verbal Memory",
     "description": "Keep as many words in short term memory as possible.",
     "imgUrl": "./assets/imgs/original/dictionary-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/dictionary-white.svg",
+    "href": "#",
+    "instruction": "You will be shown words, one at a time. I you've seen a word during the test, click SEEN, if it's a new word, click NEW."
   },
   {
     "title": "Chimp Test",
     "description": "Are you smarter than a chimpanzee?",
     "imgUrl": "./assets/imgs/original/visualization-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/visualization-white.svg",
+    "href": "#",
+    "instruction": "Click the squares in order according to their numbers."
   },
   {
     "title": "Visual Memory",
     "description": "Remember an increasingly large broad of squares.",
     "imgUrl": "./assets/imgs/original/cubes-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/cubes-white.svg",
+    "href": "#",
+    "instruction": "Memorize the squares."
   },
   {
     "title": "Typing",
     "description": "How many words per minute can you write?",
     "imgUrl": "./assets/imgs/original/gamer-blue.svg",
-    "href": "#"
+    "imgUrlWhite": "./assets/imgs/original/white/gamer-white.svg",
+    "href": "#",
+    "instruction": "Type the words exactly as written. Start typing to begin."
   }
 ]
