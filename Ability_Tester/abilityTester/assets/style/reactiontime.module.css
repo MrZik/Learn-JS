@@ -1,34 +1,45 @@
-.app__header_container_reaction_time {
-  height: 100%;
-  width: 100%;
+#container_h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
-.app__header_container_red {
-  background-color: rgb(209, 43, 43);
+#p_id {
+  margin-top: 10px;
+  color: white;
+  font-weight: 200;
+  font-size: 1.7rem;
 }
 
-.app__header_container_green {
-  background-color: rgb(49, 209, 43);
+.img_waiting {
+  width: 10%;
+  margin-bottom: 30px;
 }
 
 .app__header_container_transparent {
   background-color: none;
 }
 
-@media screen and (max-width: 1650px) {
-  .app__header_container_reaction_time {
-    width: 97%;
-  }
+.game {
+  height: 560px;
+  width: 100%;
+  padding: 0px 0px;
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
-  .app__header_container_reaction_time {
-    width: 97%;
-  }
+#waiting {
+  background-color: rgb(209, 43, 43);
 }
 
-@media screen and (max-width: 780px) {
-  .app__header_container_reaction_time {
-    width: 92%;
-  }
+#clickNow {
+  background-color: rgb(43, 209, 57);
+}
+
+#result {
+  background-color: rgb(43, 135, 209);
 }

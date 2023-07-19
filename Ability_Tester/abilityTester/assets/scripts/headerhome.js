@@ -10,5 +10,5 @@ export const addHomeDetails = function () {
     </p>
     <button type="button">Get Started</button>
     </div>
-`;
+    `;
 };

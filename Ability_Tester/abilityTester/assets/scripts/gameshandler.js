@@ -1,5 +1,8 @@
 // All games will have the method initializeGame as **
-import { initializeGame as reactionTime } from "./reactiontime.js";
+import {
+  initializeGame as reactionTime,
+  removeAllGameEventListener,
+} from "./reactiontime.js";
 
 // HARDCODE THE LINKS FIRST
 const selectedGame = [
@@ -50,10 +53,12 @@ function playGameEvent() {
     case selectedGame[7]:
       break;
   }
+  removeGameEvent();
 }
 
 export function removeGameEvent() {
   header.removeEventListener("click", playGameEvent);
+  removeAllGameEventListener();
 }
 
 // const homeDetails = (document.querySelector("header").innerHTML = `
