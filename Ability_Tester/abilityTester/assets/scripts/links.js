@@ -41,11 +41,12 @@ const createhtml = function () {
   currentContainerCount++;
 
   for (let i = 0; i < linksCount; i++) {
+    let info = gamesArray[i];
     let component = createItem(
-      gamesArray[i].title,
-      gamesArray[i].description,
-      gamesArray[i].imgUrl,
-      gamesArray[i].href,
+      info.title,
+      info.description,
+      info.imgUrl,
+      info.href,
       `${btnIdTemplate}${i}`
     );
 
