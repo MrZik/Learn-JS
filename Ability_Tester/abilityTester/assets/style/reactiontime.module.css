@@ -1,0 +1,34 @@
+.app__header_container_reaction_time {
+  height: 100%;
+  width: 100%;
+}
+
+.app__header_container_red {
+  background-color: rgb(209, 43, 43);
+}
+
+.app__header_container_green {
+  background-color: rgb(49, 209, 43);
+}
+
+.app__header_container_transparent {
+  background-color: none;
+}
+
+@media screen and (max-width: 1650px) {
+  .app__header_container_reaction_time {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__header_container_reaction_time {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .app__header_container_reaction_time {
+    width: 92%;
+  }
+}

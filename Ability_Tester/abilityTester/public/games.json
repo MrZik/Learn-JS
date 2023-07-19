@@ -61,6 +61,6 @@
     "imgUrl": "./assets/imgs/original/gamer-blue.svg",
     "imgUrlWhite": "./assets/imgs/original/white/gamer-white.svg",
     "href": "#",
-    "instruction": "Type the words exactly as written. Start typing to begin."
+    "instruction": "Type the words exactly as written. Click anywhere to start."
   }
 ]

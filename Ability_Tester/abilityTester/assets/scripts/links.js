@@ -66,7 +66,8 @@ const addOnClickEventsInButtons = function () {
   for (let i = 0; i < linksCount; i++) {
     btn = document.getElementById(`${btnIdTemplate}${i}`);
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
       handleOnGameClicked(
         gamesArray[i].imgUrlWhite,
         gamesArray[i].title,
