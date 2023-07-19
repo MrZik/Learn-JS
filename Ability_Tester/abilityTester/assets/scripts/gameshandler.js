@@ -1,7 +1,7 @@
 import "./reactiontime.js";
 const header = document.querySelector("header");
 
-const handleOnGameClicked = function (imgUrl, title, instructions) {
+export const handleOnGameClicked = function (imgUrl, title, instructions) {
   header.addEventListener("click", playGameEvent);
   document.querySelector(".app__header_container").innerHTML = `
         <img src="${imgUrl}" alt="img" />
@@ -18,7 +18,7 @@ function playGameEvent() {
   alert("Play game");
 }
 
-function removeGameEvent() {
+export function removeGameEvent() {
   header.removeEventListener("click", playGameEvent);
 }
 
@@ -32,5 +32,3 @@ function removeGameEvent() {
 //         <button type="button">Get Started</button>
 //     </div>
 // `);
-
-export { handleOnGameClicked, removeGameEvent };
