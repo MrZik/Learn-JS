@@ -1,7 +1,8 @@
 import "../style/navbar.css";
 import { removeGameEvent } from "./gameshandler";
 
-document.querySelector("nav").innerHTML = `
+export const addNavbarContents = function () {
+  document.querySelector("nav").innerHTML = `
     <div class="app__navbar_container">
         <div class="home_button" id="home">
             <p>ABILITY TESTER</p>
@@ -11,6 +12,9 @@ document.querySelector("nav").innerHTML = `
         </div>
     </div>
 `;
+
+  homebtn();
+};
 
 const returnTohome = function () {
   document.querySelector("header").innerHTML = `
@@ -27,9 +31,11 @@ const returnTohome = function () {
     `;
 };
 
-const homebtn = document.querySelector(".home_button");
-homebtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  returnTohome();
-  removeGameEvent();
-});
+const homebtn = function () {
+  const btn = document.querySelector(".home_button");
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    returnTohome();
+    removeGameEvent();
+  });
+};

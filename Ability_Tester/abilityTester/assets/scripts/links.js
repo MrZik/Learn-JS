@@ -77,7 +77,7 @@ const addOnClickEventsInButtons = function () {
   }
 };
 
-const initializeLinks = function () {
+export const initializeLinks = function () {
   getGamesAvailable()
     .then((data) => {
       gamesArray = data;
@@ -88,8 +88,6 @@ const initializeLinks = function () {
     })
     .catch((err) => console.log(err.message));
 };
-
-export { initializeLinks };
 
 // let linksContainer = (document.querySelector("#links_container").innerHTML = `
 //     <div class="app__link_subcontainer">

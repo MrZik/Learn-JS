@@ -1,12 +1,15 @@
 import "./assets/style/main.css";
-import "./assets/scripts/navbar.js";
+import { addNavbarContents } from "./assets/scripts/navbar.js";
 import "./assets/style/header.css";
-import "./assets/scripts/headerhome.js";
+import { addHomeDetails } from "./assets/scripts/headerhome.js";
 import { initializeLinks } from "./assets/scripts/links.js";
-import "./assets/scripts/footer.js";
+import { addFooterContents } from "./assets/scripts/footer.js";
 import "./assets/scripts/gameshandler.js";
 
+addNavbarContents();
+addHomeDetails();
 initializeLinks();
+addFooterContents();
 
 // document.querySelector("header").className = headerhome.app__header;
 

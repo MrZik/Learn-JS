@@ -1,6 +1,7 @@
 import "../style/headerhome.css";
 
-export const homeDetails = (document.querySelector("header").innerHTML = `
+export const addHomeDetails = function () {
+  document.querySelector("header").innerHTML = `
     <div class="app__header_container">
     <img src="./assets/imgs/original/cognitive-white.svg" alt="img" />
     <h1 id="title">Ability Tester</h1>
@@ -9,4 +10,5 @@ export const homeDetails = (document.querySelector("header").innerHTML = `
     </p>
     <button type="button">Get Started</button>
     </div>
-`);
+`;
+};
