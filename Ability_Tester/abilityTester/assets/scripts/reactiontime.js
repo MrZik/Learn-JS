@@ -62,7 +62,6 @@ const clickBox = function () {
   `;
   header.id = styles.clickNow;
 
-  // GET CURRENT TIME
   endTime = new Date().getTime();
 };
 
