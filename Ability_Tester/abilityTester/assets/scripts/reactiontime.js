@@ -34,13 +34,13 @@ const clickedEarly = function () {
 
 const waitingColorChangeEvent = function () {
   header.id = styles.result;
+  removeGameEvent();
   if (waiting) {
     clearTimeout(timeOut);
     clickedEarly();
   } else {
     clickedCorrectly();
   }
-  removeGameEvent();
 };
 
 const addGameDetails = function () {
@@ -52,6 +52,7 @@ const addGameDetails = function () {
   header.id = styles.waiting;
 
   header.addEventListener("click", waitingColorChangeEvent);
+  console.log("added waiting for color change event");
 };
 
 const clickBox = function () {
@@ -75,14 +76,16 @@ function removeGameEvent() {
   header.removeEventListener("click", waitingColorChangeEvent);
 }
 
-export const removeAllGameEventListener = function () {
+export const removeReactionTImeEvents = function () {
   clearTimeout(timeOut);
   header.removeEventListener("click", initializeGame);
   header.removeEventListener("click", waitingColorChangeEvent);
+  console.log("removed timeout and all reaction time events");
 };
 
 export const initializeGame = function () {
   header.removeEventListener("click", initializeGame);
+  console.log("removed initializeGame event");
   addGameDetails();
   startTimeout();
 };
