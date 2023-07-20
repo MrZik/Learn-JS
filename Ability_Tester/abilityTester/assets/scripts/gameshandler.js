@@ -1,8 +1,5 @@
 // All games will have the method initializeGame as **
-import {
-  initializeGame as reactionTime,
-  removeAllGameEventListener,
-} from "./reactiontime.js";
+import { initializeGame, removeAllGameEventListener } from "./reactiontime.js";
 
 // HARDCODE THE LINKS FIRST
 const selectedGame = [
@@ -36,7 +33,7 @@ export const handleOnGameClicked = function (imgUrl, title, instructions) {
 function playGameEvent() {
   switch (gameSelectedTitle) {
     case selectedGame[0]:
-      reactionTime();
+      initializeGame();
       break;
     case selectedGame[1]:
       break;
