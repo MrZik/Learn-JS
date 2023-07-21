@@ -1,24 +1,23 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+const initializePage = function () {
+  document.querySelector("#app").innerHTML = `
+    <div id="playable">
+      <div id="info">
+        <img id="logo" src="./assets/imgs/rush-white.svg" alt="img"/>
+        <h1 id="title">Reaction Time</h1>
+        <h2 id="description">Test your visual reflexes</h2>
+        <p id="instruction">- Click within the blue area to start -</p>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  `;
 
-setupCounter(document.querySelector('#counter'))
+  document.querySelector("#info").addEventListener("click", startGame);
+};
+
+const startGame = function () {
+  const playableArea = document.querySelector("#playable");
+};
+
+// FLOW HERE
+initializePage();
