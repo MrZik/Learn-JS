@@ -1,0 +1,9 @@
+.result {
+  background-color: rgb(37, 145, 245);
+}
+.waiting {
+  background-color: rgb(197, 35, 35);
+}
+.clickNow {
+  background-color: rgb(35, 197, 35);
+}
