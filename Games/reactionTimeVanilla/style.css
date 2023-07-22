@@ -10,8 +10,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body {
+
+  height: 600px;
+  width: 600px;
   margin: 0px;
   padding: 0px;
 }
@@ -29,10 +30,18 @@ p {
   margin: 0px;
   padding: 0px;
 }
-
+.result {
+  background-color: rgb(37, 145, 245);
+}
+.waiting {
+  background-color: rgb(197, 35, 35);
+}
+.clickNow {
+  background-color: rgb(35, 197, 35);
+}
 #app {
-  height: 600px;
-  width: 600px;
+  height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
 }

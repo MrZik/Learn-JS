@@ -1,19 +1,17 @@
-import "./style.css";
-import gameStyle from "./game.module.css";
-import rushUrl from "./src/rush-white.svg";
-import dotsUrl from "./src/dots.svg";
-import exclamationUrl from "./src/exclamation.svg";
 let playableArea;
 let info;
 let timeout;
 let waiting = false;
 let startTime;
+const rushImg = "rush-white.svg";
+const dotsImg = "dots.svg";
+const exclamationImg = "exclamation.svg";
 
 const initializePage = function () {
   document.querySelector("#app").innerHTML = `
     <div class="playable" id="playable">
       <div id="info">
-        <img id="logo" src=${rushUrl} alt="img"/>
+        <img id="logo" src=${rushImg} alt="img"/>
         <h1 id="title">Reaction Time</h1>
         <h2 id="description">Test your visual reflexes</h2>
         <p id="instruction">- Click within the blue area to start -</p>
@@ -32,12 +30,12 @@ const generateRandomNumber = function () {
 
 const startGame = function () {
   info.innerHTML = `
-  <img id="logo" src=${dotsUrl} alt="img"/>
+  <img id="logo" src=${dotsImg} alt="img"/>
   <h1 id="title">Wait for green color</h1>
   `;
 
   waiting = true;
-  playableArea.className = gameStyle.waiting;
+  playableArea.className = "waiting";
 
   info.removeEventListener("click", startGame);
   const waitTime = generateRandomNumber();
@@ -61,20 +59,20 @@ const gameRunning = function () {
 
 const clickBox = function () {
   waiting = false;
-  playableArea.className = gameStyle.clickNow;
+  playableArea.className = "clickNow";
   startTime = new Date().getTime();
 
   info.innerHTML = `
-  <img id="logo" src=${dotsUrl} alt="img"/>
+  <img id="logo" src=${dotsImg} alt="img"/>
   <h1 id="title">Click now!</h1>
   `;
 };
 
 const clickedEarly = function () {
-  playableArea.className = gameStyle.result;
+  playableArea.className = "result";
 
   info.innerHTML = `
-  <img id="logo" src=${exclamationUrl} alt="img"/>
+  <img id="logo" src=${exclamationImg} alt="img"/>
   <h1 id="title">Clicked too early!</h1>
   <p id="instruction">Click to try again</p>
   `;
@@ -83,10 +81,10 @@ const clickedEarly = function () {
 const clickedCorrectly = function () {
   const getClickTime = new Date().getTime();
   const time = getClickTime - startTime;
-  playableArea.className = gameStyle.result;
+  playableArea.className = "result";
 
   info.innerHTML = `
-  <img id="logo" src=${exclamationUrl} alt="img"/>
+  <img id="logo" src=${exclamationImg} alt="img"/>
   <h1 id="title">${time} ms</h1>
   <p id="instruction">Click to keep going</p>
   `;
