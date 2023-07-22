@@ -44,6 +44,23 @@ const wrongsequence = function () {
   document.getElementById("btntext").addEventListener("click", startGame, once);
 };
 
+const gameover = function () {
+  playable.innerHTML = `
+        <div id="info">
+            <img src=${icon} alt="img" type="img/svg.xml" id="logo" />
+            <p id="outroinfo">SCORE</p>
+            <p id="outro">${currentsequencecount}</p>
+            <button type="button" id="tryagain">
+                <p id="btntext">Try again</p>
+            </button>
+        </div>
+    `;
+
+  document
+    .getElementById("tryagain")
+    .addEventListener("click", initializePage, once);
+};
+
 const generateRandomNumber = function () {
   return Math.floor(Math.random() * gridtotal);
 };
@@ -89,7 +106,8 @@ const gridevent = function (event) {
   } else {
     // incorrect sequence
     ++strikecount;
-    wrongsequence();
+
+    strikecount === maxstrikecount ? gameover() : wrongsequence();
   }
 };
 
@@ -138,6 +156,7 @@ const initializePage = function () {
   const btn = document.querySelector("#startbtn");
   btn.addEventListener("click", startGame, once);
   currentsequencecount = initialsequencecount;
+  strikecount = 0;
 };
 
 initializePage();
