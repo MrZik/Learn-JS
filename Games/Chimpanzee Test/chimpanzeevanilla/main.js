@@ -89,9 +89,16 @@ const gridevent = function (event) {
   }
 
   if (Number(event.target.id) === currentsequencenumber) {
+    if (currentsequencenumber === 1) {
+      // cover with white background all other sequences
+      const sequencebtns = document.querySelectorAll(".gamebtn");
+      sequencebtns.forEach((x) => x.classList.add("visible"));
+    }
+
     currentsequencenumber++;
 
-    if (event.target.className === "gamebtn") {
+    // because we know that we always put "gamebtn" as the first index in the class name"
+    if (event.target.classList[0] === "gamebtn") {
       event.srcElement.children[0].className = "hidden";
     } else if (event.target.className === "number") {
       event.srcElement.parentElement.className = "hidden";
@@ -99,14 +106,14 @@ const gridevent = function (event) {
 
     event.target.className = "hidden";
 
-    if (currentsequencenumber === currentsequencecount) {
+    if (currentsequencenumber > currentsequencecount) {
       currentsequencecount++;
-      // create new grid with additional sequence
+      currentsequencecount > gridtotal && (currentsequencecount = gridtotal);
+      startGame();
     }
   } else {
     // incorrect sequence
     ++strikecount;
-
     strikecount === maxstrikecount ? gameover() : wrongsequence();
   }
 };
@@ -141,8 +148,10 @@ const initializegame = function (element) {
 };
 
 function startGame(event) {
-  event.stopPropagation();
-  event.preventDefault();
+  if (event !== undefined) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
 
   btns.length = 0;
   currentsequencenumber = 1;
@@ -150,11 +159,19 @@ function startGame(event) {
   initializegame(playable);
 }
 
-const initializePage = function () {
+const initializePage = function (event) {
+  if (event !== undefined) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
   lobbyhtml(app);
+
   playable = document.querySelector("#playable");
   const btn = document.querySelector("#startbtn");
+
   btn.addEventListener("click", startGame, once);
+
   currentsequencecount = initialsequencecount;
   strikecount = 0;
 };
