@@ -29,6 +29,12 @@ h2 {
   margin: 0px;
   padding: 0px;
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #playable {
   height: 100%;
   width: 100%;
@@ -68,4 +74,25 @@ h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0px;
+}
+#game {
+  height: 100%;
+  width: 40%;
+  margin: 10px 0px;
+}
+.grid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+.gamebtn {
+  height: 90px;
+  width: 90px;
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.589);
+  border-radius: 12px;
 }
