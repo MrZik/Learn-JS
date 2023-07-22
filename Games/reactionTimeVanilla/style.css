@@ -10,9 +10,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  height: 600px;
-  width: 600px;
+}
+body {
+  height: 100vh;
   margin: 0px;
   padding: 0px;
 }
@@ -84,12 +84,15 @@ p {
   font-size: 1.4rem;
 }
 
-@media screen and (max-width: 780px) {
-  #app {
-    height: 600px;
+@media screen and (max-width: 560px) {
+  body {
+    height: 100vh;
     width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
-  .app__header_container {
+  #app {
+    height: 100%;
     width: 100%;
   }
 }
