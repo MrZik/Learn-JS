@@ -62,11 +62,13 @@ body {
   margin-bottom: 20px;
 }
 #resulttitle {
+  text-align: center;
   font-size: 1.7rem;
   font-weight: 500;
   margin: 0px;
 }
 #resulttime {
+  text-align: center;
   margin: 0px;
   font-size: 2rem;
   font-weight: 600;
@@ -79,7 +81,7 @@ body {
   border-radius: 4px;
   background-color: rgb(255, 221, 25);
 }
-#tryagainbtn {
+#tryagainbtn:hover {
   background-color: rgb(253, 243, 183);
 }
 #btntext {
@@ -90,6 +92,7 @@ body {
   font-weight: 600;
 }
 #gametitle {
+  text-align: center;
   margin: 0px 0px 20px 0px;
   font-size: 4rem;
   font-weight: 600;
@@ -100,6 +103,7 @@ body {
   margin-bottom: 20px;
 }
 #instruction {
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   margin: 0px 0px 20px 0px;
@@ -120,4 +124,58 @@ body {
   color: rgb(60, 60, 60);
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 550px) {
+  #app {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #target {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #target {
+    height: 80px;
+    width: 80px;
+  }
+  #instruction {
+    font-size: 1.2rem;
+    padding: 0px 60px;
+  }
+  #gametitle {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #app {
+    height: 100%;
+    width: 100%;
+  }
+  #target {
+    height: 70px;
+    width: 70px;
+  }
+  #instruction {
+    font-size: 1rem;
+    padding: 0px 60px;
+  }
+  #gametitle {
+    font-size: 2rem;
+  }
+  #instructionimg {
+    height: 90px;
+    width: 90px;
+  }
+  #startbtn {
+    height: 40px;
+    width: 90px;
+  }
 }

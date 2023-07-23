@@ -1,4 +1,17 @@
-const maxheight = 400;
+let windowwidth = screen.availWidth;
+let windowheight = screen.availHeight;
+// 600 is the app width, 100 is the target width
+let maxwidth = windowwidth - 100;
+if (windowwidth <= 290) {
+  maxwidth = windowwidth - 70;
+} else if (windowwidth <= 390) {
+  maxwidth = windowwidth - 80;
+} else if (windowwidth <= 480) {
+  maxwidth = windowwidth - 90;
+}
+
+// 600 is the app width, 100 is the target height, header takes 50
+const maxheight = windowheight - 150;
 const aimcount = 30;
 const app = document.getElementById("app");
 
@@ -10,16 +23,12 @@ let target;
 let count;
 
 const rndxpos = (() => {
-  // 600 is the app width, 100 is the target width
-  const maxwidth = 500;
   return function () {
     return Math.floor(Math.random() * maxwidth);
   };
 })();
 
 const rndypos = (() => {
-  // 600 is the app width, 100 is the target width, header takes 50
-  const maxheight = 400;
   return function () {
     return Math.floor(Math.random() * maxheight);
   };
@@ -105,8 +114,8 @@ const targetclickevent = function () {
 };
 
 const initializetarget = function () {
-  target.style.top = "200px";
-  target.style.left = "250px";
+  target.style.top = (windowheight / 2 - 80).toString();
+  target.style.left = (windowwidth / 2 - 50).toString();
 
   target.addEventListener("click", targetclickevent);
 };
