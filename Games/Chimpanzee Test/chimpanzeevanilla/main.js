@@ -1,17 +1,32 @@
 const maxstrikecount = 3;
-const rowcount = 8;
-const columncount = 5;
-const initialsequencecount = 3;
-const gridtotal = rowcount * columncount;
 const btns = [];
 const icon = "visualization.svg";
 const app = document.querySelector("#app");
 
+let initialsequencecount = 3;
 let playable;
-let currentsequencecount = initialsequencecount;
 let currentsequencenumber = 1;
 let strikecount = 0;
+let rowcount = 4;
+let columncount = 5;
 
+const widthsizesmall = window.matchMedia("(max-width: 390px)");
+const widthsizesmallextra = window.matchMedia("(max-width: 300px)");
+if (widthsizesmallextra.matches) {
+  rowcount = 2;
+  columncount = 6;
+} else if (widthsizesmall.matches) {
+  rowcount = 3;
+  columncount = 6;
+} else {
+  rowcount = 4;
+  columncount = 5;
+}
+
+const gridtotal = rowcount * columncount;
+// debug
+// initialsequencecount = rowcount * columncount;
+let currentsequencecount = initialsequencecount;
 const once = {
   once: true,
 };
@@ -22,7 +37,7 @@ const lobbyhtml = function (element) {
           <div id="info">
               <img src=${icon} alt="img" type="img/svg.xml" id="logo" />
               <h1 id="title">Are you smarter than a chimpanzee?</h1>
-              <h2 id="description">Click the squares in ascending order.</h2>
+              <h2 id="description">Click the squares in ascending order</h2>
               <button type="button" id="startbtn">
                   <p id="btntext">Start</p>
               </button>
@@ -118,9 +133,9 @@ const gridevent = function (event) {
   }
 };
 
-const initializegame = function (element) {
+const initializegame = function () {
   getIndexes();
-  element.innerHTML = `
+  playable.innerHTML = `
     <div id="game">
         <div class="grid"></div>
     </div>
@@ -132,11 +147,12 @@ const initializegame = function (element) {
 
   for (let i = 0; i < gridtotal; i++) {
     if (btns.includes(i)) {
+      const btnid = btns.indexOf(i) + 1;
       divs += `
-        <div class="gamebtn" id="${btns.indexOf(i) + 1}">
-            <p class="number" id="${btns.indexOf(i) + 1}">${
-        btns.indexOf(i) + 1
-      }</p>
+        <div class="gamebtn" id="${btnid}">
+            <p class="number" id="${btnid}">
+                ${btnid}
+            </p>
         </div>
         `;
     } else {
@@ -156,7 +172,7 @@ function startGame(event) {
   btns.length = 0;
   currentsequencenumber = 1;
 
-  initializegame(playable);
+  initializegame();
 }
 
 const initializePage = function (event) {
