@@ -1,17 +1,25 @@
-let windowwidth = screen.availWidth;
-let windowheight = screen.availHeight;
+// window.innerWidth and height gets the size of the bounding container it is in.
+// not the screen size.
+let windowwidth = window.innerWidth;
+let windowheight = window.innerHeight;
+
+const windowwidth290 = window.matchMedia("(max-width: 290px)");
+const windowwidth390 = window.matchMedia("(max-width: 390px)");
+const windowwidth480 = window.matchMedia("(max-width: 480px)");
+
 // 600 is the app width, 100 is the target width
 let maxwidth = windowwidth - 100;
-if (windowwidth <= 290) {
+// 600 is the app width, 100 is the target height, header takes 50
+let maxheight = windowheight - 150;
+
+if (windowwidth290.matches) {
   maxwidth = windowwidth - 70;
-} else if (windowwidth <= 390) {
+} else if (windowwidth390.matches) {
   maxwidth = windowwidth - 80;
-} else if (windowwidth <= 480) {
+} else if (windowwidth480.matches) {
   maxwidth = windowwidth - 90;
 }
 
-// 600 is the app width, 100 is the target height, header takes 50
-const maxheight = windowheight - 150;
 const aimcount = 30;
 const app = document.getElementById("app");
 
