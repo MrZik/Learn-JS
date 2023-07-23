@@ -25,6 +25,20 @@ const rndypos = (() => {
   };
 })();
 
+const showinstructions = function () {
+  app.innerHTML = `
+    <p id="gametitle">Aim Trainer</p>
+    <img src="target.svg" alt="img" id="instructionimg"/>
+    <p id="instruction">Hit 30 targets as quickly as you can</p>
+    <button type="button" id="startbtn">
+        <p id="btnstarttext">Start</p>
+    </button>
+    `;
+
+  const startbtn = document.getElementById("startbtn");
+  startbtn.addEventListener("click", tryagainlogic);
+};
+
 const tryagainlogic = function () {
   showgame();
   initializetarget();
@@ -49,7 +63,7 @@ const showgame = function () {
   firstclick = true;
   app.innerHTML = `
         <div id="header">
-            <p id="headertitle">Remaining <span id="count">5</span></p>
+            <p id="headertitle">Remaining <span id="count">${currentcount}</span></p>
         </div>
         <div id="container">
             <div id="target">
@@ -61,8 +75,6 @@ const showgame = function () {
   target = document.getElementById("target");
   count = document.getElementById("count");
 };
-
-showgame();
 
 const updatecount = (function () {
   return function () {
@@ -99,4 +111,4 @@ const initializetarget = function () {
   target.addEventListener("click", targetclickevent);
 };
 
-initializetarget();
+showinstructions();
