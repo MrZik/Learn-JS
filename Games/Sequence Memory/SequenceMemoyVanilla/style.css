@@ -10,6 +10,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
 }
 #app {
   height: 100vh;
@@ -20,6 +25,15 @@
   justify-content: center;
   background-color: rgb(72, 168, 247);
 }
+#instructioncontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 #gameicon {
   height: 100px;
   width: 100px;
@@ -27,7 +41,7 @@
 #gametitle {
   text-align: center;
   margin: 0px;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 #gamedescription {
@@ -54,15 +68,113 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-@media screen and (max-width: 550px) {
+#gamecontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#leveltext {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 14px 0px 0px 0px;
+}
+#currentlevel {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-left: 5px;
+}
+#gridcontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin: 50px 0px 0px 0px;
+}
+#column {
+  height: max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.gamebox {
+  height: 100px;
+  width: 100px;
+  border: 6px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: linear 0.15s;
 }
 
-@media screen and (max-width: 480px) {
+#box0 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box2 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box3 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box4 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box5 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box6 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box7 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#box8 {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
+#gameovertitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0px;
+}
+#finallevel {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0px;
+}
+#restartbtn {
+  height: 50px;
+  width: 110px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(255, 221, 25);
+  cursor: pointer;
+}
+#restartbtn:hover {
+  background-color: rgb(253, 243, 183);
+}
 @media screen and (max-width: 390px) {
+  .gamebox {
+    height: 80px;
+    width: 80px;
+  }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 310px) {
+  .gamebox {
+    height: 60px;
+    width: 60px;
+  }
 }
