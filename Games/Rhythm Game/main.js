@@ -1,6 +1,7 @@
 const playbtn = document.getElementById("playbtn");
 let audio = new Audio("MAX300.mp3");
 const audioCtx = new window.AudioContext();
+let bpm = 300;
 let audioSource;
 let analyser;
 
