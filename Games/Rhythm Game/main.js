@@ -151,7 +151,9 @@ function moveLeftLineToCenter(duration, nextBeatTime) {
       leftLineIntervalId = requestAnimationFrame(animate);
     } else {
       setTimeout(() => {
-        leftLineElement.style.transform = `translateX(0)`;
+        if (!isPlaying) {
+          leftLineElement.style.transform = `translateX(0)`;
+        }
       }, nextBeatTime / 2); // Stay at the center for half the time of the next beat
     }
   }
@@ -186,7 +188,9 @@ function moveRightLineToCenter(duration, nextBeatTime) {
       rightLineIntervalId = requestAnimationFrame(animate);
     } else {
       setTimeout(() => {
-        rightLineElement.style.transform = `translateX(0)`;
+        if (!isPlaying) {
+          rightLineElement.style.transform = `translateX(0)`;
+        }
       }, nextBeatTime / 2); // Stay at the center for half the time of the next beat
     }
   }
@@ -218,15 +222,16 @@ function updateVisualAid() {
 function stopVisualAidAnimation() {
   if (leftLineIntervalId) {
     cancelAnimationFrame(leftLineIntervalId);
+    leftLineIntervalId = null;
+    const leftLineElement = document.querySelector(".left-line");
+    leftLineElement.style.transform = "translateX(0)";
   }
   if (rightLineIntervalId) {
     cancelAnimationFrame(rightLineIntervalId);
+    rightLineIntervalId = null;
+    const rightLineElement = document.querySelector(".right-line");
+    rightLineElement.style.transform = "translateX(0)";
   }
-
-  const leftLineElement = document.querySelector(".left-line");
-  const rightLineElement = document.querySelector(".right-line");
-  leftLineElement.style.transform = "translateX(0)";
-  rightLineElement.style.transform = "translateX(0)";
 }
 
 // Attach event listeners
