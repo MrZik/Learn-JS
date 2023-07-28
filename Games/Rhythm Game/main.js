@@ -7,7 +7,7 @@ let analyser;
 
 playbtn.addEventListener("click", (e) => {
   e.preventDefault();
-  audio.volume = 0.1;
+  audio.volume = 0.11;
   audio.play();
   audioSource = audioCtx.createMediaElementSource(audio);
   analyser = audioCtx.createAnalyser();
