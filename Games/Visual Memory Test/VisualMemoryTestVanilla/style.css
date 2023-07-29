@@ -13,24 +13,58 @@
   -webkit-user-select: none;
   user-select: none;
   touch-action: none;
+  overflow: hidden;
 }
 body {
   margin: 0px;
-  padding: 0px;
 }
 h1 {
-  padding: 0px;
   margin: 0px;
   text-align: center;
 }
 p {
   text-align: center;
   margin: 0px;
-  padding: 0px;
 }
 #app {
   height: 100vh;
   height: 100svh;
   width: 100%;
   background-color: rgb(39, 151, 255);
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+}
+.icon {
+  margin-top: 100px;
+  width: clamp(70px, 90px, 160px);
+}
+.title {
+  font-size: clamp(1.7rem, 2rem, 3rem);
+  inset: 0px 30px;
+}
+.description {
+  font-size: clamp(1rem, 1.3rem, 2.5rem);
+  inset: 0px 30px;
+}
+.btn {
+  height: 40px;
+  width: 90px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(255, 221, 71);
+}
+.btn:hover {
+  background-color: rgb(247, 239, 204);
+}
+.btn-text {
+  font-size: clamp(1rem, 1.3rem, 2.5rem);
+  font-weight: 600;
+  color: rgb(71, 71, 71);
 }

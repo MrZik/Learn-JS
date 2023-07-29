@@ -211,7 +211,7 @@ function updateVisualAid() {
   const noteType = parseInt(timeSignature.split("/")[1], 10);
   const nextBeatTime = calculateNextBeatTime(beatsPerMeasure, noteType);
 
-  const visualAidSpeed = 2; // Adjust this value for controlling the speed (higher value = slower animation)
+  const visualAidSpeed = 10; // Adjust this value for controlling the speed (higher value = slower animation)
 
   const duration = ((60 / currentBpm) * 1000 * (4 / noteType)) / visualAidSpeed;
 
