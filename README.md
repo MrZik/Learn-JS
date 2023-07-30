@@ -1,6 +1,7 @@
 # Learn-JS
 
-I will be posting my js files here while learning the programming language.
+From zero to hero is the goal!
+All javascript,html,css will be posted here and will be seperated by folders.
 
 I will be learning from the following sources:
 https://leetcode.com/ , 
