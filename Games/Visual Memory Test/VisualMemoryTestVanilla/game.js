@@ -25,6 +25,11 @@ let wrongBoxes = [];
 let wrongBoxesCount = 0;
 let maxWrongCount = currentBoxesToMemorizeCount;
 let gridColumns = 3;
+
+if (containerwidth < 320) {
+  gridColumns = 2;
+}
+
 let boxDimension = 300;
 let boxDimensionIncreament = 50;
 
@@ -216,6 +221,11 @@ const onLevelWon = function () {
         }
       } else if (gridColumns === 3) {
         if (containerwidth < 370) {
+          maxWrongCount--;
+          maxWrongCount <= 0 && (maxWrongCount = 0);
+        }
+      } else if (gridColumns === 2) {
+        if (containerwidth < 320) {
           maxWrongCount--;
           maxWrongCount <= 0 && (maxWrongCount = 0);
         }
