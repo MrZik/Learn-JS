@@ -222,6 +222,8 @@ const onLevelWon = function () {
       } else if (gridColumns === 3) {
         if (containerwidth < 370) {
           maxWrongCount--;
+          console.log("less than 370");
+
           maxWrongCount <= 0 && (maxWrongCount = 0);
         }
       } else if (gridColumns === 2) {
@@ -230,8 +232,6 @@ const onLevelWon = function () {
           maxWrongCount <= 0 && (maxWrongCount = 0);
         }
       } else {
-        boxGrid.innerHTML = ``;
-
         clickableBoxToCreate +=
           clickablBoxBaseIncrease + clickableBoxIncreament;
 
@@ -243,7 +243,7 @@ const onLevelWon = function () {
         boxGrid.style.height = boxDimension + boxDimensionIncreament;
         boxDimensionIncreament += 50;
       }
-
+      boxGrid.innerHTML = ``;
       createBoxes();
       getBoxes();
     } else {
