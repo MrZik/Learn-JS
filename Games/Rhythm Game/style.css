@@ -32,4 +32,14 @@ p {
   height: 100svh;
   width: 100%;
   background-color: rgb(39, 151, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 32, 32);
+  display: inline; /* none */
 }
