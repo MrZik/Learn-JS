@@ -5,10 +5,10 @@ const audioElem = document.querySelector("audio");
 audioElem.src = "./Let the beat hit em! (CLASSIC R&B STYLE).mp3";
 const track = ctx.createMediaElementSource(audioElem);
 
-const volume = ctx.createGain();
-volume.gain.value = 0.2; // 20%
+const mainLoopVolume = ctx.createGain();
+mainLoopVolume.gain.value = 0.2; // 20%
 
-track.connect(volume).connect(ctx.destination);
+track.connect(mainLoopVolume).connect(ctx.destination);
 
 const bpm = 102;
 
