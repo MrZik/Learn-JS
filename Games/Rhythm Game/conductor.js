@@ -71,11 +71,11 @@ function loop() {
   }
 }
 
-function play() {
+const play = function () {
   audioElem.play();
   startTime = CTX.currentTime;
   startUpdate();
   audioElem.addEventListener("ended", songEnd);
-}
+};
 
 window.addEventListener("keydown", play, { once: true });
