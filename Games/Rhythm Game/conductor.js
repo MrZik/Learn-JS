@@ -1,4 +1,4 @@
-const BPM = 102;
+const BPM = 100;
 const FPS = 300;
 const CTX = new AudioContext();
 const HI_HAT_CLIP = "./179757__mike624__vermona-hi-hat-1.mp3";
@@ -16,8 +16,8 @@ const clipTrack = CTX.createMediaElementSource(croschetAudio);
 const mainLoopVolume = CTX.createGain();
 const croschetVolume = CTX.createGain();
 
-mainLoopVolume.gain.value = 0.2; // 20%
-croschetVolume.gain.value = 0.3;
+mainLoopVolume.gain.value = 0.25; // 20%
+croschetVolume.gain.value = 0.35;
 
 track.connect(mainLoopVolume).connect(CTX.destination);
 clipTrack.connect(croschetVolume).connect(CTX.destination);
@@ -53,6 +53,7 @@ function startUpdate() {
 function songEnd() {
   clearInterval(update);
   lastbeat = 0;
+  songPosition = 0;
   window.addEventListener("keydown", play, { once: true });
 }
 
@@ -70,7 +71,6 @@ function loop() {
     croschetAudio.play();
   }
 }
-
 const play = function () {
   audioElem.play();
   startTime = CTX.currentTime;
