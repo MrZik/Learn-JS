@@ -46,3 +46,6 @@ p {
 .hidden {
   display: none;
 }
+.left-movement {
+  display: none;
+}
