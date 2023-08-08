@@ -1,3 +1,4 @@
+const dotElem = document.querySelector(".dot");
 const BPM = 100;
 const FPS = 300;
 const CTX = new AudioContext();
@@ -22,10 +23,10 @@ croschetVolume.gain.value = 0.35;
 track.connect(mainLoopVolume).connect(CTX.destination);
 clipTrack.connect(croschetVolume).connect(CTX.destination);
 
+// The number of seconds each beat
+// this is also equal to the duration of a quarter note
 let crotchet = 60 / BPM;
 
-//The number of seconds for each song beat
-let secPerBeat = 0;
 let audio;
 
 //Current song position, in seconds
@@ -39,7 +40,7 @@ let startTime = 0;
 let lastbeat = 0;
 let update;
 
-function startUpdate() {
+const startUpdate = () => {
   // for some reason, it will not work if
   // I just add it all to the total offset??
   offset += CTX.outputLatency;
@@ -48,18 +49,18 @@ function startUpdate() {
   totalOffset += offset;
   console.log(`total offset: ${offset}`, `start time: ${startTime}`);
   update = setInterval(loop, 1000 / FPS);
-}
+};
 
-function songEnd() {
+const songEnd = () => {
   clearInterval(update);
   lastbeat = 0;
   songPosition = 0;
   window.addEventListener("keydown", play, { once: true });
-}
+};
 
-function loop() {
+const loop = () => {
   songPosition = CTX.currentTime - totalOffset;
-  songPosInBeats = songPosition / secPerBeat;
+  songPosInBeats = songPosition / crotchet;
 
   if (songPosition >= lastbeat + crotchet) {
     // console.log(
@@ -70,8 +71,16 @@ function loop() {
     lastbeat += crotchet;
     croschetAudio.play();
   }
-}
-const play = function () {
+};
+
+const showDot = () => {
+  dotElem.classList.remove("hidden");
+  setTimeout(() => {
+    dotElem.classList.add("hidden");
+  }, crotchet);
+};
+
+const play = () => {
   audioElem.play();
   startTime = CTX.currentTime;
   startUpdate();

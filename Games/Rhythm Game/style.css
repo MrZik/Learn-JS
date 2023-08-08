@@ -43,3 +43,6 @@ p {
   background-color: rgb(255, 32, 32);
   display: inline; /* none */
 }
+.hidden {
+  display: none;
+}
