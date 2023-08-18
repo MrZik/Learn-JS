@@ -1,5 +1,5 @@
-class state {
-  constructor(state) {
-    this.state = state;
-  }
+export class State {
+  Enter() {}
+  Update(deltaTime) {}
+  Exit() {}
 }
