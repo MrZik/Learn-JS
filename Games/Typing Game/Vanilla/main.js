@@ -11,6 +11,5 @@ playerStateMachine.currentState.Enter();
 
 document.addEventListener("keydown", (e) => {
   if (e.code == "Space") {
-    playerStateMachine.ChangeState(playerStateMachine.playerLocomotionState);
   }
 });
