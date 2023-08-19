@@ -1,14 +1,16 @@
-import { Statemachine } from "./statemachine.js";
 import { PlayerIdleState } from "./playeridlestate.js";
 
-export class PlayerStateMachine extends Statemachine {
+export class PlayerStateMachine {
+  currentState = null;
   playerIdleState = new PlayerIdleState(this);
 
   Initialize(setState) {
-    super.Initialize(setState);
+    this.currentState = setState;
   }
 
   ChangeState(newState) {
-    super.ChangeState(newState);
+    this.currentState.Exit();
+    this.currentState = newState;
+    this.currentState.Enter();
   }
 }
