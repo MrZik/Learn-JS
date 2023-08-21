@@ -1,22 +1,23 @@
 import { GameFinishState } from "./gamefinishstate.js";
 import { PlayerInputState } from "./playerinputstate.js";
-import { GameInitializeState } from "./gameinitializestate";
+import { GameInitializeState } from "./gameinitializestate.js";
 
 export class StateFactory {
   stateMachine = null;
+
   constructor(stateMachine) {
     this.stateMachine = stateMachine;
   }
 
   GameInitialize() {
-    return new GameInitializeState(stateMachine);
+    return new GameInitializeState(this.stateMachine);
   }
 
   PlayerInput() {
-    return new PlayerInputState(stateMachine);
+    return new PlayerInputState(this.stateMachine);
   }
 
   GameFinish() {
-    return new GameFinishState(stateMachine);
+    return new GameFinishState(this.stateMachine);
   }
 }

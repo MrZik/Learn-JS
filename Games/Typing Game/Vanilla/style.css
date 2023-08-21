@@ -1,6 +1,52 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(253, 253, 253, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+  overflow: hidden;
+}
 body {
   margin: 0px;
 }
-.app {
+h1 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
+#app {
+  height: 100vh;
+  height: 100svh;
+  width: 100vw;
+  width: 100svw;
   background-color: rgb(70, 147, 255);
+}
+#container {
+  min-height: 50svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.text-box-container {
+  background-color: rgb(243, 243, 243);
+  border-radius: 6px;
+
+  max-width: 85svw;
+  max-width: 85vw;
+  padding: 5px 10px;
+}
+#text-to-type {
+  color: rgba(0, 0, 0, 0.87);
 }

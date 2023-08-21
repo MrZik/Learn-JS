@@ -8,7 +8,7 @@ export class GameFinishState {
     console.log("Entered Game Finish state.");
   }
 
-  Update(deltaTime) {
+  Update() {
     console.log("Game Finish state update running.");
   }
 

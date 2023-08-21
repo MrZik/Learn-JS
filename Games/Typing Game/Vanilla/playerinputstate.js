@@ -8,7 +8,7 @@ export class PlayerInputState {
     console.log("Entered Player Input State.");
   }
 
-  Update(deltaTime) {
+  Update() {
     console.log("Player Input State update running.");
   }
 
