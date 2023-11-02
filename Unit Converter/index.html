@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Unit Converter</title>
+  </head>
+
+  <body>
+    <div id="App">
+      <div id="App_Title">
+        <h1 class="Title">Unit Converter</h1>
+      </div>
+      <div id="App_Body">
+        <p id="currentTime"></p>
+        <div class="Body_Container">
+          <p class="Identifier" for="ConvertionType">Unit Type</p>
+          <select
+            title="Type"
+            class="Dropdown"
+            name="ConvertionType"
+            id="ConvertionType"
+          ></select>
+        </div>
+        <div class="Body_Container">
+          <p class="Identifier" for="Value_Input">From</p>
+          <input
+            title="InputField"
+            type="text"
+            id="Value_Input"
+            name="Value_Input"
+          />
+          <label class="Choices" for="Input_Type"></label>
+          <select
+            title="InputDropdown"
+            class="Dropdown"
+            name="Input_Type"
+            id="Input_Type"
+          ></select>
+        </div>
+        <div class="Body_Container">
+          <p class="Identifier">To</p>
+          <p id="Value_Output">Result</p>
+          <label class="Choices" for="Output_Type"></label>
+          <select
+            title="OutputDropdown"
+            class="Dropdown"
+            name="Output_Type"
+            id="Output_Type"
+          ></select>
+        </div>
+        <div>
+          <button type="button" class="Lock_Unlock_Result">Lock</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load external JavaScript -->
+    <script defer type="module" src="main.js"></script>
+  </body>
+</html>

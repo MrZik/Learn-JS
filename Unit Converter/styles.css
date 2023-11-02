@@ -1,0 +1,72 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.Title {
+  padding: 0px 5px;
+}
+
+.Body_Container {
+  width: 100%;
+  height: 50px;
+  margin: 4px 0px;
+  background-color: lightyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.Identifier {
+  width: 100px;
+  height: 40px;
+  font-size: 1.15em;
+}
+
+.Dropdown {
+  width: 130px;
+  padding: 5px 0px;
+  font-size: 1.15em;
+}
+
+.Lock_Unlock_Result {
+  width: 80px;
+  padding: 5px 0px;
+  margin: 5px;
+  font-size: 1.15em;
+}
+
+#currentTime {
+  padding: 0px 5px;
+}
+
+#App {
+  width: 100svw;
+  height: 100svh;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+}
+
+#App_Body {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#Value_Input {
+  width: 130px;
+  padding: 5px 0px;
+  margin-right: 10px;
+  font-size: 1.15em;
+}
+
+#Value_Output {
+  width: 130px;
+  padding: 5px 0px;
+  margin-right: 13px;
+  font-size: 1.15em;
+}
