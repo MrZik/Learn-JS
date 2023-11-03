@@ -1,12 +1,18 @@
-import { t } from "./UnitAndTypes.js";
+// *******************************************
+// ___________________________________________
+//                 REMINDER
+// Type(s) refer to the type of measurement
+// examples are Temperature, Speed, etc...
+//
+// Unit(s) refer to the type(s) children
+// examples are Celcius, Miles per Hr, etc...
+// ___________________________________________
+// *******************************************
+import { typesAndUnits } from "./UnitAndTypes.js";
 
 function showTime() {
   document.getElementById("currentTime").innerHTML = new Date().toUTCString();
 }
-showTime();
-setInterval(function () {
-  showTime();
-}, 1000);
 
 const convertionTypes = [
   "Temperature",
@@ -15,55 +21,6 @@ const convertionTypes = [
   "Time",
   "Pressure",
   "Mass",
-];
-
-let types = {};
-types["Temperature"] = ["Celsius", "Fahrenheit", "Kelvin"];
-types["Speed"] = ["Mile/hr", "Foot/sec", "Meter/sec", "Kilometer/hr", "Knot"];
-
-types["Length"] = [
-  "Kilometer",
-  "Meter",
-  "Centimeter",
-  "Millimeter",
-  "Micrometer",
-  "Nanometer",
-  "Mile",
-  "Yard",
-  "Foot",
-  "Inch",
-  "Nautical Mile",
-  "Statute Mile",
-];
-
-types["Time"] = [
-  "Nanosecond",
-  "Microsecond",
-  "Millisecond",
-  "Second",
-  "Minute",
-  "Hour",
-  "Day",
-  "Week",
-  "Month",
-  "Calendar Year",
-  "Decade",
-  "Century",
-];
-
-types["Pressure"] = ["Bar", "Pascal", "lbs/sq.in.", "Millibars", "Torr"];
-
-types["Mass"] = [
-  "Tonne",
-  "Kilogram",
-  "Gram",
-  "Milligram",
-  "Microgram",
-  "Imperial ton",
-  "US ton",
-  "Stone",
-  "Pound",
-  "Ounce",
 ];
 
 const ClearDropdownOptions = (dropdown) => {
@@ -85,7 +42,7 @@ const fromUnitDropdown = document.getElementById("Input_Type");
 const toUnitDropdown = document.getElementById("Output_Type");
 
 // initialize current type index with the first index always
-let currentTypeIndex = convertionTypes[0];
+let currentTypeString = convertionTypes[0];
 
 // Get input field element
 const userInput = document.getElementById("Value_Input");
@@ -99,12 +56,24 @@ const ClearUnitDropdowns = () => {
 };
 
 const UpdateUnitDropdownOptions = () => {
-  AddDropdownOptions(fromUnitDropdown, types[currentTypeIndex]);
-  AddDropdownOptions(toUnitDropdown, types[currentTypeIndex]);
+  AddDropdownOptions(
+    fromUnitDropdown,
+    typesAndUnits[currentTypeString].TypeUnits
+  );
+  AddDropdownOptions(
+    toUnitDropdown,
+    typesAndUnits[currentTypeString].TypeUnits
+  );
   toUnitDropdown.selectedIndex = 1;
 };
 
 const Initialize = () => {
+  showTime();
+
+  setInterval(function () {
+    showTime();
+  }, 1000);
+
   ClearDropdownOptions(selectedTypeDropdown);
   ClearUnitDropdowns();
 
@@ -114,23 +83,41 @@ const Initialize = () => {
 
 // Fn for handling events
 const OnTypeChanged = (dropdown) => {
-  currentTypeIndex = convertionTypes[dropdown.selectedIndex];
+  currentTypeString = convertionTypes[dropdown.selectedIndex];
+
+  userInput.value = "";
+  outputField.innerText = "Result";
+
   ClearUnitDropdowns();
   UpdateUnitDropdownOptions();
 };
 
-const OnInputChanged = (newInput) => {
+let userInputValue;
+
+const ShowConvertionResult = (val) => {
+  // Get Indexes to be used in the options array
   const fromUnitIndex = fromUnitDropdown.selectedIndex;
   const toUnitIndex = toUnitDropdown.selectedIndex;
 
   // Get string format
-  const fromUnit = fromUnitDropdown.options[fromUnitIndex].value;
-  const toUnit = toUnitDropdown.options[toUnitIndex].value;
+  const fromUnit = fromUnitDropdown.options[fromUnitIndex].value; // ex. Celcius
+  const toUnit = toUnitDropdown.options[toUnitIndex].value; // ex. Fahrenheit
 
-  let compute;
-  window.alert(currentTypeIndex);
+  const typeSelected = typesAndUnits[currentTypeString]; // ex. Temperature
+  const result = typeSelected[fromUnit][toUnit].GetConvertedValue(val); // ex. Celcius - Fahrenheit
 
-  outputField.innerText = parseFloat(newInput.value);
+  outputField.innerText = result;
+};
+
+const OnUnitChanged = () => {
+  ShowConvertionResult(userInputValue);
+};
+
+const OnInputChanged = (newInput) => {
+  // TODO:
+  // Do a check before parsing here
+  userInputValue = parseFloat(newInput.value);
+  ShowConvertionResult(userInputValue);
 };
 
 // ****************
@@ -144,10 +131,22 @@ selectedTypeDropdown.addEventListener("change", (e) => {
   OnTypeChanged(e.target);
 });
 
+fromUnitDropdown.addEventListener("change", (e) => {
+  e.stopPropagation();
+  OnUnitChanged();
+});
+
+toUnitDropdown.addEventListener("change", (e) => {
+  e.stopPropagation();
+  OnUnitChanged();
+});
+
 userInput.addEventListener("input", (e) => {
   e.stopPropagation();
   OnInputChanged(e.target);
 });
 
-let temp = t["Temperature"]["Celsius"];
+//console.log(typesAndUnits[currentTypeString].TypeUnits);
+//let temp = typesAndUnits["Temperature"]["Celsius"];
 //console.log(t.Temperature.Celsius.Fahrenheit(15));
+//console.log(temp.Fahrenheit(15));
